@@ -93,6 +93,45 @@ section { padding:78px 0; }
 
 /* ===== DURGA PUJA OFFER ===== */
 /* ===== DURGA PUJA OFFER CARD (Fixed) ===== */
+/* --- Maa Durga background image layer --- */
+.durga-offer-card{
+  position: relative;
+  isolation: isolate;
+}
+
+.durga-offer-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+
+  background-image: url("../images/offers/maa-durga.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  transform: scale(1.35);
+  opacity: 0.45;
+  filter: saturate(1.2) contrast(1.1);
+}
+
+.durga-offer-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+
+  background: linear-gradient(
+    135deg,
+    rgba(143,15,20,0.88),
+    rgba(212,31,38,0.82) 45%,
+    rgba(176,20,27,0.88)
+  );
+}
+
+/* keep your content above background */
+.coin-bg{ position:absolute; inset:0; z-index:2; }
+.durga-side, .durga-center{ position:relative; z-index:3; }
 .offers-section { padding:60px 0; }
 
 .durga-offer-card {
