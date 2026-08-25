@@ -96,7 +96,7 @@ function renderOffers() {
   if (!grid) return;
   const rest = OFFERS.filter(function (o) { return !o.gold; });
   grid.innerHTML = rest.map(function (o) {
-    const waLink = WA_BASE + encodeURIComponent("Hi RK Automobiles, I'm interested in: " + o.title);
+    const waLink = WA_BASE + encodeURIComponent("Hi RK AUTOMOBILES, I'm interested in: " + o.title);
     return `
     <div class="offer-card${o.alt ? " alt" : ""}">
       <div class="offer-top">
