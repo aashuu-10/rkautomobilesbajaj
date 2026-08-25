@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://aashuu-10.github.io/rkautomobilesbajaj/sitemap.xml
