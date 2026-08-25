@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aashuu-10.github.io/rkautomobilesbajaj/sitemap.xml
+Sitemap: https://rkautomobiles.co.in/sitemap.xml
