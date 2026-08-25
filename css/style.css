@@ -92,16 +92,220 @@ section { padding:78px 0; }
 .sec-head p { color:var(--grey); font-size:16px; }
 
 /* ===== DURGA PUJA OFFER ===== */
+/* ===== DURGA PUJA OFFER CARD (Fixed) ===== */
 .offers-section { padding:60px 0; }
-.durga-offer-card { display:grid; grid-template-columns:200px 1fr 200px; background:radial-gradient(900px 300px at 15% -10%,rgba(255,215,0,.28),transparent 60%), radial-gradient(900px 300px at 90% 110%,rgba(255,215,0,.22),transparent 60%), linear-gradient(135deg,#8f0f14,#d41f26 45%,#b0141b); border-radius:24px; color:#fff; overflow:hidden; box-shadow:0 24px 60px rgba(180,16,26,.35); border:1px solid rgba(255,215,0,.45); margin-bottom:10px; }
-.durga-side { display:flex; align-items:flex-end; justify-content:center; overflow:hidden; }
-.durga-side img { width:100%; height:100%; object-fit:cover; object-position:top center; opacity:0.88; transition:.4s; }
-.durga-side img:hover { opacity:1; transform:scale(1.04); }
-.durga-center { padding:36px 24px; text-align:center; }
-.of-badge { display:inline-block; background:linear-gradient(135deg,#ffd700,#f0b400); color:#6b1a10; font-weight:800; padding:7px 18px; border-radius:30px; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; }
-.of-sub { font-size:15px; font-weight:600; color:#ffe98a; margin-bottom:10px; }
-.durga-headline { font-size:clamp(16px,2.2vw,26px); line-height:1.35; margin-bottom:22px; text-shadow:0 4px 20px rgba(0,0,0,.3); }
-.gold-text { color:#ffd700; font-size:clamp(20px,3vw,34px); font-weight:800; display:block; }
+
+.durga-offer-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  background: radial-gradient(900px 300px at 15% -10%, rgba(255,215,0,.28), transparent 60%),
+              radial-gradient(900px 300px at 90% 110%, rgba(255,215,0,.22), transparent 60%),
+              linear-gradient(135deg, #8f0f14, #d41f26 45%, #b0141b);
+  border-radius: 24px;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(180,16,26,.35);
+  border: 1px solid rgba(255,215,0,.45);
+  margin-bottom: 10px;
+}
+
+.coin-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.float-coin {
+  position: absolute;
+  bottom: -50px;
+  font-size: 28px;
+  opacity: 0.35;
+  animation: floatUpCoin 7s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(255,215,0,0.6));
+}
+.float-coin.silver {
+  filter: drop-shadow(0 0 6px rgba(200,200,200,0.6));
+  font-size: 22px;
+}
+@keyframes floatUpCoin {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-520px) rotate(360deg); opacity: 0; }
+}
+
+.durga-side {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.durga-motif {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.durga-glow {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,215,0,0.5) 0%, transparent 70%);
+  animation: durgaPulse 2.5s ease-in-out infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+@keyframes durgaPulse {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -60%) scale(1); }
+  50% { opacity: 0.9; transform: translate(-50%, -60%) scale(1.15); }
+}
+.durga-emoji {
+  position: relative;
+  font-size: 56px;
+  z-index: 2;
+  filter: drop-shadow(0 4px 12px rgba(255,215,0,0.6));
+}
+.durga-label {
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffe98a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.durga-center {
+  position: relative;
+  z-index: 2;
+  padding: 36px 24px;
+  text-align: center;
+}
+.of-badge {
+  display: inline-block;
+  background: linear-gradient(135deg,#ffd700,#f0b400);
+  color: #6b1a10;
+  font-weight: 800;
+  padding: 7px 18px;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.of-sub {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffe98a;
+  margin-bottom: 10px;
+}
+.durga-headline {
+  font-size: clamp(16px,2.2vw,26px);
+  line-height: 1.35;
+  margin-bottom: 22px;
+  text-shadow: 0 4px 20px rgba(0,0,0,.3);
+}
+.gold-text {
+  color: #ffd700;
+  font-size: clamp(20px,3vw,34px);
+  font-weight: 800;
+  display: block;
+}
+.of-steps {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.step {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 14px;
+  padding: 14px 10px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+.step .step-n {
+  width: 32px; height: 32px;
+  margin: 0 auto 8px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg,#ffd700,#f0b400);
+  color: #6b1a10; font-weight: 800;
+  border-radius: 50%; font-size: 14px;
+}
+.step b { display: block; font-size: 13px; }
+.step small { font-size: 11px; opacity: .85; }
+.prizes-title {
+  font-size: 16px;
+  color: #ffe98a;
+  margin-bottom: 14px;
+}
+.prize-coins-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.prize-coin-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.prize-coin-item span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffe98a;
+}
+.coin-wrap {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 3px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255,215,0,.5);
+  animation: coinGlow 2s ease-in-out infinite alternate;
+}
+.coin-emoji { font-size: 34px; }
+.gold-coin { background: radial-gradient(circle at 35% 30%, #fff6c9, #ffd700 45%, #b8860b 100%); }
+.silver-coin { background: radial-gradient(circle at 35% 30%, #ffffff, #c0c0c0 45%, #808080 100%); border-color: #d9d9d9; box-shadow: 0 0 20px rgba(200,200,200,.6); }
+.emoji-prize {
+  background: rgba(255,255,255,0.15);
+  font-size: 28px;
+  border: 3px solid rgba(255,215,0,0.5);
+}
+@keyframes coinGlow {
+  from { box-shadow: 0 0 10px rgba(255,215,0,.4); }
+  to { box-shadow: 0 0 28px rgba(255,215,0,.9); }
+}
+.of-perks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.perk { font-size: 13px; font-weight: 600; }
+.offer-terms { font-size: 12px; color: #9aa3af; margin-top: 12px; }
+
+@media (max-width: 900px) {
+  .durga-offer-card { grid-template-columns: 1fr; }
+  .durga-side { padding: 20px 0; }
+  .durga-right { order: 3; }
+}
+@media (max-width: 600px) {
+  .durga-emoji { font-size: 40px; }
+  .coin-wrap { width: 56px; height: 56px; }
+  .coin-emoji { font-size: 26px; }
+  .emoji-prize { font-size: 22px; }
+  .float-coin { font-size: 20px; }
+}
 
 /* Steps */
 .of-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:22px; }
