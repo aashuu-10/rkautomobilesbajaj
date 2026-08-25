@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RK Automobiles | Bajaj Bike Showroom - Book a Bike & Service</title>
+  <meta name="description" content="RK Automobiles - Authorised Bajaj bike showroom in Chandrapura. Explore the full Bajaj range, calculate your EMI, and book your bike or service online via WhatsApp." />
+  <link rel="canonical" href="https://aashuu-10.github.io/rkautomobilesbajaj/" />
+  <meta property="og:title" content="RK Automobiles | Authorised Bajaj Showroom - Chandrapura" />
+  <meta property="og:description" content="Explore the full Bajaj range, calculate your EMI, and book a bike or service instantly on WhatsApp." />
+  <meta property="og:image" content="https://aashuu-10.github.io/rkautomobilesbajaj/images/logo/logo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aashuu-10.github.io/rkautomobilesbajaj/" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/logo/logo.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "RK Automobiles",
+    "image": "https://aashuu-10.github.io/rkautomobilesbajaj/images/logo/logo.jpg",
+    "url": "https://aashuu-10.github.io/rkautomobilesbajaj/",
+    "telephone": "+917004799172",
+    "email": "rkautomobilesbokaro@gmail.com",
+    "priceRange": "₹₹",
+    "brand": { "@type": "Brand", "name": "Bajaj" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Station Rd, Choubey Market",
+      "addressLocality": "Chandrapura",
+      "addressRegion": "Jharkhand",
+      "postalCode": "828403",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:30",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <img src="images/logo/logo.jpg" alt="RK Automobiles logo" class="logo-img" />
+        <span class="logo-text">
+          <b>RK AUTOMOBILES</b>
+          <span>Bajaj Showroom</span>
+        </span>
+      </a>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#bikes">Bikes</a></li>
+        <li><a href="#catalogue">Full Catalogue</a></li>
+        <li><a href="#emi">EMI Calculator</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#branches">Branches</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#booking" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero with Sliding Bikes ===== -->
+  <header class="hero" id="home">
+    <!-- Background slides -->
+    <div class="hero-slideshow">
+      <div class="hero-slide active" style="background-image:url('images/bikes/ns400z/glossy-racing-red.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/bikes/ns200/glossy-ebony-black.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/bikes/n160/atlantic-blue.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/bikes/chetak/brooklyn-black.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/bikes/ns160/pewter-grey.jpg')"></div>
+    </div>
+    <!-- Dark overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Dot indicators -->
+    <div class="slide-dots">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+      <span class="dot" onclick="goToSlide(3)"></span>
+      <span class="dot" onclick="goToSlide(4)"></span>
+    </div>
+
+    <!-- Bike name chip bottom right -->
+    <div class="slide-chip">
+      <span class="slide-chip-tag" id="slideTag">⚡ 40 PS Power</span>
+      <span class="slide-chip-name" id="slideName">Pulsar NS400Z</span>
+    </div>
+
+    <!-- Hero content -->
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="hero-kicker">Authorised Bajaj Dealer</span>
+        <h1>Ride the <em>Legend.</em><br/>Experience the Pulsar.</h1>
+        <p class="lead">Welcome to RK Automobiles — your trusted Bajaj showroom. Explore the complete range of Bajaj motorcycles, book your dream bike, and get expert service — all in one place.</p>
+        <div class="hero-actions">
+          <a href="#bikes" class="btn btn-red">Explore Bikes</a>
+          <a href="#booking" class="btn btn-outline-white">Book on WhatsApp</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>25+</b><span>Years of Trust</span></div>
+          <div class="stat"><b>5000+</b><span>Happy Riders</span></div>
+          <div class="stat"><b>4.8★</b><span>Customer Rating</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Offers ===== -->
+  <section id="offers" class="offers-section">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Exclusive Deals</span>
+        <h2>Ongoing Offers</h2>
+        <p>Check out our latest showroom offers &amp; festive deals on your favourite Bajaj bikes.</p>
+      </div>
+
+      <!-- Durga Puja Special Card -->
+      <div class="durga-offer-card">
+
+        <!-- Left Durga Image -->
+        <div class="durga-side durga-left">
+          <img src="https://i.imgur.com/8Q2Q2Qv.png"
+               onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Durga_Puja_idol.jpg/400px-Durga_Puja_idol.jpg'"
+               alt="Maa Durga" />
+        </div>
+
+        <!-- Center Content -->
+        <div class="durga-center">
+          <div class="of-badge">⭐ Mega Offer</div>
+          <p class="of-sub">🎉 Ride Karo, Jeeto Dil Khol Ke!</p>
+          <h3 class="durga-headline">
+            इस दुर्गा पूजा हर बाइक खरीद पर<br/>
+            <span class="gold-text">10 ग्राम 24K Gold</span><br/>
+            जीतने का सुनहरा मौका!
+          </h3>
+
+          <!-- Steps -->
+          <div class="of-steps">
+            <div class="step">
+              <span class="step-n">1</span>
+              <b>Buy a Bike</b>
+              <small>बाइक खरीदें</small>
+            </div>
+            <div class="step">
+              <span class="step-n">2</span>
+              <b>Get Scratch Card</b>
+              <small>स्क्रैच कार्ड पाएं</small>
+            </div>
+            <div class="step">
+              <span class="step-n">3</span>
+              <b>Scratch &amp; Win</b>
+              <small>स्क्रैच करें</small>
+            </div>
+            <div class="step">
+              <span class="step-n">4</span>
+              <b>Win Prizes!</b>
+              <small>इनाम जीतें</small>
+            </div>
+          </div>
+
+          <!-- Coins & Prizes -->
+          <h4 class="prizes-title">🏆 Guaranteed Scratch Card Prizes</h4>
+          <div class="prize-coins-row">
+            <div class="prize-coin-item">
+              <div class="coin-wrap gold-coin">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Gold_coin_icon.svg/200px-Gold_coin_icon.svg.png"
+                     onerror="this.src='https://images.unsplash.com/photo-1610375461246-83df859d849d?w=200&q=80'"
+                     alt="Gold Coin" />
+              </div>
+              <span>10g 24K Gold</span>
+            </div>
+            <div class="prize-coin-item">
+              <div class="coin-wrap silver-coin">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Silver_coin.svg/200px-Silver_coin.svg.png"
+                     onerror="this.src='https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=200&q=80'"
+                     alt="Silver Coin" />
+              </div>
+              <span>10g Silver Coin</span>
+            </div>
+            <div class="prize-coin-item">
+              <div class="coin-wrap emoji-prize">🍹</div>
+              <span>Mixer Grinder</span>
+            </div>
+            <div class="prize-coin-item">
+              <div class="coin-wrap emoji-prize">⌚</div>
+              <span>Smart Watch</span>
+            </div>
+            <div class="prize-coin-item">
+              <div class="coin-wrap emoji-prize">🎁</div>
+              <span>&amp; Many More!</span>
+            </div>
+          </div>
+
+          <!-- Perks -->
+          <div class="of-perks">
+            <span class="perk">✓ Low Down Payment</span>
+            <span class="perk">✓ Easy Finance</span>
+            <span class="perk">✓ Best Exchange Value</span>
+            <span class="perk">✓ Assured Gifts</span>
+          </div>
+
+          <a href="https://wa.me/917004799172?text=Hi%20RK%20Automobiles%2C%20I%20want%20to%20know%20more%20about%20the%20Durga%20Puja%20Gold%20Offer!"
+             target="_blank" class="btn btn-gold" style="width:100%;margin-top:20px;font-size:16px;">
+            💰 Claim This Offer on WhatsApp
+          </a>
+          <p class="offer-terms">Guaranteed prize on every scratch card! Valid during Durga Puja. Subject to T&amp;C.</p>
+        </div>
+
+        <!-- Right Durga Image -->
+        <div class="durga-side durga-right">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Durga_Puja_idol.jpg/400px-Durga_Puja_idol.jpg"
+               alt="Maa Durga" />
+        </div>
+
+      </div>
+
+      <!-- Other JS-rendered offers below -->
+      <div class="offers-grid" id="offersGrid" style="margin-top:32px;"></div>
+
+      <p style="text-align:center;color:#5b6470;margin-top:22px;font-size:13px;">
+        Offers are updated by RK Automobiles. Please visit/contact the showroom for full terms &amp; eligibility.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Bikes ===== -->
+  <section id="bikes">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Our Range</span>
+        <h2>Explore the Bajaj Line-up</h2>
+        <p>From the mighty Pulsar to the super-efficient Platina and the world's first CNG bike.</p>
+      </div>
+      <div class="bike-grid" id="bikeGrid"></div>
+      <p style="text-align:center;color:#5b6470;margin-top:26px;font-size:13px;">*Prices are indicative ex-showroom. Contact showroom for on-road price &amp; latest offers.</p>
+    </div>
+  </section>
+
+  <!-- ===== Full Catalogue ===== -->
+  <section id="catalogue" style="background:var(--soft);">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Complete Catalogue</span>
+        <h2>All Current Bajaj Models</h2>
+        <p>The full list of Bajaj motorcycles available at RK Automobiles with indicative prices.</p>
+      </div>
+      <div class="catalogue-wrap">
+        <div class="cat-scroll">
+          <table>
+            <thead><tr><th>Model</th><th class="ta-r">Indicative Price</th></tr></thead>
+            <tbody id="catalogueBody"></tbody>
+          </table>
+        </div>
+        <div class="cat-note">*Ex-showroom price, may vary by state. Visit showroom for exact on-road pricing.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EMI Calculator ===== -->
+  <section id="emi">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Plan Your Purchase</span>
+        <h2>Bike Loan EMI Calculator</h2>
+        <p>Estimate your monthly installment instantly, then apply for finance directly on WhatsApp.</p>
+      </div>
+      <div class="emi-wrap">
+        <div class="emi-controls">
+          <div class="emi-field">
+            <div class="emi-label-row">
+              <label>Vehicle Price</label>
+              <span class="emi-value" id="emiPriceVal">₹1,50,000</span>
+            </div>
+            <input type="range" id="emiPrice" min="70000" max="250000" step="1000" value="150000" />
+          </div>
+          <div class="emi-field">
+            <div class="emi-label-row">
+              <label>Down Payment</label>
+              <span class="emi-value" id="emiDownVal">₹30,000</span>
+            </div>
+            <input type="range" id="emiDown" min="5000" max="150000" step="1000" value="30000" />
+          </div>
+          <div class="emi-field">
+            <div class="emi-label-row">
+              <label>Interest Rate (per annum)</label>
+              <span class="emi-value" id="emiRateVal">9.5%</span>
+            </div>
+            <input type="range" id="emiRate" min="7" max="16" step="0.25" value="9.5" />
+          </div>
+          <div class="emi-field">
+            <label style="margin-bottom:10px;display:block;">Loan Tenure</label>
+            <div class="emi-tenure">
+              <button type="button" class="tenure-btn" data-months="12">12 mo</button>
+              <button type="button" class="tenure-btn" data-months="24">24 mo</button>
+              <button type="button" class="tenure-btn active" data-months="36">36 mo</button>
+              <button type="button" class="tenure-btn" data-months="48">48 mo</button>
+            </div>
+          </div>
+        </div>
+        <div class="emi-result">
+          <span class="emi-result-label">Estimated Monthly EMI</span>
+          <div class="emi-amount" id="emiMonthly">₹4,077/mo</div>
+          <p class="emi-note">*Indicative only. Excludes RTO, insurance &amp; processing fee.</p>
+          <div class="emi-breakup">
+            <div class="emi-row"><span>Loan Amount</span><b id="emiLoanAmt">₹1,20,000</b></div>
+            <div class="emi-row"><span>Total Interest</span><b id="emiInterest">₹26,772</b></div>
+            <div class="emi-row"><span>Total Payable</span><b id="emiTotal">₹1,46,772</b></div>
+          </div>
+          <button class="btn btn-wa" style="width:100%;" id="emiApplyBtn">
+            Apply for This Loan on WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Booking & Service ===== -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Book Online</span>
+        <h2>Book a Bike or Schedule a Service</h2>
+        <p>Fill the form and your request goes straight to our WhatsApp.</p>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="bookTab">🚀 Book a Bike</button>
+        <button class="tab-btn" data-tab="svcTab">🛠 Book a Service</button>
+      </div>
+      <div class="tab-pane active" id="bookTab">
+        <div class="form-card">
+          <div class="form-grid">
+            <div class="field"><label>Select Your Bike *</label><select id="bkBike"><option value="">Choose a model…</option></select></div>
+            <div class="field"><label>Preferred Colour</label><select id="bkColor"><option value="Not selected">Select colour</option><option>Black</option><option>White</option><option>Red</option><option>Blue</option><option>Grey</option><option>Matt Black</option><option>Orange</option><option>Teal</option></select></div>
+            <div class="field"><label>Your Name *</label><input type="text" id="bkName" placeholder="Full name" /></div>
+            <div class="field"><label>Mobile Number *</label><input type="tel" id="bkPhone" placeholder="10-digit mobile" /></div>
+            <div class="field"><label>City</label><input type="text" id="bkCity" value="Chandrapura" /></div>
+            <div class="field"><label>Mode</label><select id="bkMode"><option>Full Payment</option><option>Finance / Loan</option><option>Test Drive First</option></select></div>
+          </div>
+          <div class="form-foot">
+            <span class="hint">📲 Your booking details will open in WhatsApp to confirm.</span>
+            <button class="btn btn-wa" onclick="bookBikeNow()">Book on WhatsApp</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="svcTab">
+        <div class="form-card">
+          <form id="serviceForm" onsubmit="return bookService(event)">
+            <div class="form-grid">
+              <div class="field"><label>Your Name *</label><input type="text" id="svName" required placeholder="Full name" /></div>
+              <div class="field"><label>Mobile Number *</label><input type="tel" id="svPhone" required placeholder="10-digit mobile" /></div>
+              <div class="field"><label>Your Bajaj Bike *</label><select id="svBike" required><option value="">Select your bike…</option></select></div>
+              <div class="field"><label>Service Type *</label><select id="svType" required><option value="General Service">General Service</option><option value="Periodic Service">Periodic Service</option><option value="Engine Oil / Filter">Engine Oil / Filter</option><option value="Brake / Clutch Check">Brake / Clutch Check</option><option value="Accidental Repair">Accidental Repair</option><option value="Warranty Claim">Warranty Claim</option></select></div>
+              <div class="field full"><label>Preferred Date</label><input type="date" id="svDate" /></div>
+            </div>
+            <div class="form-foot">
+              <span class="hint">🛠 We'll confirm your slot on WhatsApp.</span>
+              <button class="btn btn-red" type="submit">Book Service on WhatsApp</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Us ===== -->
+  <section id="why">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Why RK Automobiles</span>
+        <h2>The Complete Bajaj Experience</h2>
+        <p>From buying to servicing, we take care of the entire journey.</p>
+      </div>
+      <div class="feat-grid">
+        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21V12h6v9"/></svg></div><h4>Genuine Showroom</h4><p>Authorised Bajaj dealer with 100% genuine bikes and parts.</p></div>
+        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h4>Easy Finance</h4><p>Attractive EMI plans &amp; quick loan approval in minutes.</p></div>
+        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h4>Expert Service</h4><p>Factory-trained technicians with genuine Bajaj service.</p></div>
+        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg></div><h4>Easy Exchange</h4><p>Trade-in your old bike for the best market value.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Branches ===== -->
+  <section id="branches" style="background:var(--soft);">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Find Us</span>
+        <h2>Our Branches</h2>
+        <p>Visit the RK Automobiles showroom nearest to you.</p>
+      </div>
+      <div class="branch-grid">
+        <div class="branch-card">
+          <div class="branch-head"><span class="branch-badge">Branch 1</span><h3>Main Showroom</h3></div>
+          <div class="branch-addr"><span class="pin">📍</span><p>Beltand Station Road, Telo, Mahato Market,<br/>Near Durga Mandir</p></div>
+          <div class="branch-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Beltand+Station+Road+Telo+Mahato+Market+Chandrapura" target="_blank" class="btn btn-outline">Get Directions</a>
+            <a href="https://wa.me/917004799172?text=Hello%20RK%20Automobiles%2C%20I%20want%20to%20enquire%20about%20Bajaj%20bikes." target="_blank" class="btn btn-wa">WhatsApp Us</a>
+          </div>
+        </div>
+        <div class="branch-card">
+          <div class="branch-head"><span class="branch-badge">Branch 2</span><h3>Dugda Showroom</h3></div>
+          <div class="branch-addr"><span class="pin">📍</span><p>Chandwadih, Station Road, Dugda,<br/>District: Bokaro</p></div>
+          <div class="branch-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Chandwadih+Station+Road+Dugda+Bokaro" target="_blank" class="btn btn-outline">Get Directions</a>
+            <a href="https://wa.me/917004799172?text=Hello%20RK%20Automobiles%2C%20I%20want%20to%20enquire%20about%20Bajaj%20bikes." target="_blank" class="btn btn-wa">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" style="background:var(--soft);">
+    <div class="container about-grid">
+      <div class="about-img">
+        <img src="images/bikes/ns200/glossy-ebony-black.jpg" alt="RK Automobiles" />
+      </div>
+      <div class="about-content">
+        <span class="kicker" style="color:var(--red);">About Us</span>
+        <h2>Chandrapura's Trusted Bajaj Showroom</h2>
+        <p>RK Automobiles has been serving riders for over two decades, delivering the legendary Bajaj experience with honesty and care.</p>
+        <ul class="about-list">
+          <li><span class="tick">✓</span><span>Complete range of Bajaj bikes &amp; genuine accessories in stock.</span></li>
+          <li><span class="tick">✓</span><span>Hassle-free booking, finance and exchange assistance.</span></li>
+          <li><span class="tick">✓</span><span>Authorised Bajaj service centre with trained technicians.</span></li>
+          <li><span class="tick">✓</span><span>Instant WhatsApp support for bookings &amp; enquiries.</span></li>
+        </ul>
+        <a href="#booking" class="btn btn-red" style="margin-top:14px;">Book Your Bike</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">Get In Touch</span>
+        <h2>Visit or Contact Us</h2>
+        <p>Drop by the showroom, call us, or send a quick WhatsApp enquiry.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="info-card">
+          <h3>RK Automobiles</h3>
+          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Address</b><span>Station Rd, Choubey Market, Chandrapura, Jharkhand - 828403</span></div></div>
+          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span><div><b>Phone / WhatsApp</b><span><a href="tel:+917004799172" style="color:#c9d1dc;">+91 70047 99172</a></span></div></div>
+          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg></span><div><b>Email</b><span><a href="mailto:rkautomobilesbokaro@gmail.com" style="color:#c9d1dc;">rkautomobilesbokaro@gmail.com</a></span></div></div>
+          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><b>Timings</b><span>Mon–Sat: 9:30 AM – 8:00 PM | Sun: 10 AM – 5 PM</span></div></div>
+        </div>
+        <div>
+          <div class="form-card" style="box-shadow:none;">
+            <h3 style="margin-bottom:18px;">Send an Enquiry</h3>
+            <form id="contactForm">
+              <div class="form-grid">
+                <div class="field"><label>Name *</label><input type="text" id="ctName" required placeholder="Your name" /></div>
+                <div class="field"><label>Phone *</label><input type="tel" id="ctPhone" required placeholder="10-digit mobile" /></div>
+                <div class="field full"><label>Message</label><textarea id="ctMsg" placeholder="Type your enquiry here…"></textarea></div>
+              </div>
+              <div class="form-foot" style="margin-top:18px;">
+                <span class="hint">📲 Sends to our WhatsApp.</span>
+                <button class="btn btn-wa" type="submit">Send Enquiry</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container foot-grid">
+      <div class="foot-logo">
+        <img src="images/logo/logo.jpg" alt="RK Automobiles" class="foot-logo-img" />
+        <b>RK AUTOMOBILES</b>
+        <p>Authorised Bajaj bike showroom &amp; service centre.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/bajajchandrapura/?hl=en" target="_blank" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://wa.me/917004799172" target="_blank" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.5-6c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.3 0-.4s-.5-1.3-.7-1.7-.4-.4-.5-.4h-.4a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.7 11.7 0 0 0 4.5 4 5.2 5.2 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg></a>
+        </div>
+      </div>
+      <div><h5>Quick Links</h5><a href="#home">Home</a><a href="#offers">Offers</a><a href="#bikes">Bikes</a><a href="#catalogue">Catalogue</a><a href="#emi">EMI Calculator</a><a href="#booking">Book a Bike</a><a href="#branches">Branches</a></div>
+      <div><h5>Popular Models</h5><a href="#bikes">Pulsar NS400Z</a><a href="#bikes">Pulsar NS200</a><a href="#bikes">Pulsar N160</a><a href="#bikes">Dominar 400</a><a href="#bikes">Freedom 125 CNG</a></div>
+      <div><h5>Contact</h5><p style="font-size:14px;">Station Rd, Choubey Market, Chandrapura, Jharkhand - 828403</p><p style="font-size:14px;"><a href="tel:+917004799172">+91 70047 99172</a></p><p style="font-size:14px;">Mon–Sat: 9:30 AM – 8:00 PM</p></div>
+    </div>
+    <div class="foot-bottom">
+      <div class="container">© <span id="year"></span> RK Automobiles, Chandrapura. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ===== Modal ===== -->
+  <div class="overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div class="modal-top">
+        <div class="modal-stage">
+          <img id="modalMain" src="" alt="Bike view" />
+          <div class="modal-thumbs" id="modalThumbs"></div>
+        </div>
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <div class="price" id="modalPrice"></div>
+          <p id="modalDesc"></p>
+          <div class="modal-specs" id="modalSpecs"></div>
+          <div class="modal-foot">
+            <button class="btn btn-wa" id="modalBook" onclick="bookBike(this.dataset.id)">Book on WhatsApp</button>
+            <button class="btn btn-dark" onclick="closeModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917004799172?text=Hello%20RK%20Automobiles%2C%20I%20have%20a%20quick%20question."
+     target="_blank" id="waFloat" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.5-6c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.3-2.9c-.3-.4.2-.4.6-1.3.1-.2 0-.3 0-.4s-.5-1.3-.7-1.7-.4-.4-.5-.4h-.4a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.7 11.7 0 0 0 4.5 4 5.2 5.2 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/>
+    </svg>
+  </a>
+
+  <button id="toTop" aria-label="Scroll to top">↑</button>
+
+  <script src="js/bikes-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
