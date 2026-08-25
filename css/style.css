@@ -91,47 +91,7 @@ section { padding:78px 0; }
 .sec-head h2 { font-size:clamp(28px,4vw,42px); margin:10px 0 12px; }
 .sec-head p { color:var(--grey); font-size:16px; }
 
-/* ===== DURGA PUJA OFFER ===== */
-/* ===== DURGA PUJA OFFER CARD (Fixed) ===== */
-/* --- Maa Durga background image layer --- */
-.durga-offer-card{
-  position: relative;
-  isolation: isolate;
-}
-
-.durga-offer-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-
-  background-image: url("../images/offers/maa-durga.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  transform: scale(1.35);
-  opacity: 0.45;
-  filter: saturate(1.2) contrast(1.1);
-}
-
-.durga-offer-card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:1;
-
-  background: linear-gradient(
-    135deg,
-    rgba(143,15,20,0.88),
-    rgba(212,31,38,0.82) 45%,
-    rgba(176,20,27,0.88)
-  );
-}
-
-/* keep your content above background */
-.coin-bg{ position:absolute; inset:0; z-index:2; }
-.durga-side, .durga-center{ position:relative; z-index:3; }
+/* ===== DURGA PUJA OFFER CARD ===== */
 .offers-section { padding:60px 0; }
 
 .durga-offer-card {
@@ -147,15 +107,25 @@ section { padding:78px 0; }
   box-shadow: 0 24px 60px rgba(180,16,26,.35);
   border: 1px solid rgba(255,215,0,.45);
   margin-bottom: 10px;
+  isolation: isolate;
 }
 
-.coin-bg {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
+.durga-offer-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background-image: url("../images/offers/maa-durga.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.18;
+  filter: saturate(1.2) contrast(1.1);
 }
+
+.coin-bg{ position:absolute; inset:0; z-index:1; overflow:hidden; pointer-events:none; }
+.durga-side, .durga-center{ position:relative; z-index:3; }
+
 .float-coin {
   position: absolute;
   bottom: -50px;
@@ -180,7 +150,6 @@ section { padding:78px 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
 }
 .durga-motif {
   position: relative;
@@ -221,8 +190,6 @@ section { padding:78px 0; }
 }
 
 .durga-center {
-  position: relative;
-  z-index: 2;
   padding: 36px 24px;
   text-align: center;
 }
@@ -256,99 +223,10 @@ section { padding:78px 0; }
   font-weight: 800;
   display: block;
 }
-.of-steps {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 12px;
-  margin-bottom: 22px;
-}
-.step {
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 14px;
-  padding: 14px 10px;
-  text-align: center;
-  backdrop-filter: blur(4px);
-}
-.step .step-n {
-  width: 32px; height: 32px;
-  margin: 0 auto 8px;
-  display: grid; place-items: center;
-  background: linear-gradient(135deg,#ffd700,#f0b400);
-  color: #6b1a10; font-weight: 800;
-  border-radius: 50%; font-size: 14px;
-}
-.step b { display: block; font-size: 13px; }
-.step small { font-size: 11px; opacity: .85; }
-.prizes-title {
-  font-size: 16px;
-  color: #ffe98a;
-  margin-bottom: 14px;
-}
-.prize-coins-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-.prize-coin-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-.prize-coin-item span {
-  font-size: 12px;
-  font-weight: 700;
-  color: #ffe98a;
-}
-.coin-wrap {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  border: 3px solid #ffd700;
-  box-shadow: 0 0 20px rgba(255,215,0,.5);
-  animation: coinGlow 2s ease-in-out infinite alternate;
-}
-.coin-emoji { font-size: 34px; }
-.gold-coin { background: radial-gradient(circle at 35% 30%, #fff6c9, #ffd700 45%, #b8860b 100%); }
-.silver-coin { background: radial-gradient(circle at 35% 30%, #ffffff, #c0c0c0 45%, #808080 100%); border-color: #d9d9d9; box-shadow: 0 0 20px rgba(200,200,200,.6); }
-.emoji-prize {
-  background: rgba(255,255,255,0.15);
-  font-size: 28px;
-  border: 3px solid rgba(255,215,0,0.5);
-}
-@keyframes coinGlow {
-  from { box-shadow: 0 0 10px rgba(255,215,0,.4); }
-  to { box-shadow: 0 0 28px rgba(255,215,0,.9); }
-}
-.of-perks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 6px;
-}
-.perk { font-size: 13px; font-weight: 600; }
-.offer-terms { font-size: 12px; color: #9aa3af; margin-top: 12px; }
-
-@media (max-width: 900px) {
-  .durga-offer-card { grid-template-columns: 1fr; }
-  .durga-side { padding: 20px 0; }
-  .durga-right { order: 3; }
-}
-@media (max-width: 600px) {
-  .durga-emoji { font-size: 40px; }
-  .coin-wrap { width: 56px; height: 56px; }
-  .coin-emoji { font-size: 26px; }
-  .emoji-prize { font-size: 22px; }
-  .float-coin { font-size: 20px; }
-}
 
 /* Steps */
 .of-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:22px; }
-.step { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.25); border-radius:14px; padding:14px 10px; text-align:center; }
+.step { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.25); border-radius:14px; padding:14px 10px; text-align:center; backdrop-filter:blur(4px); }
 .step .step-n { width:32px; height:32px; margin:0 auto 8px; display:grid; place-items:center; background:linear-gradient(135deg,#ffd700,#f0b400); color:#6b1a10; font-weight:800; border-radius:50%; font-size:14px; }
 .step b { display:block; font-size:13px; }
 .step small { font-size:11px; opacity:.85; }
@@ -358,16 +236,16 @@ section { padding:78px 0; }
 .prize-coins-row { display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:20px; }
 .prize-coin-item { display:flex; flex-direction:column; align-items:center; gap:8px; }
 .prize-coin-item span { font-size:12px; font-weight:700; color:#ffe98a; }
-.coin-wrap { width:72px; height:72px; border-radius:50%; overflow:hidden; border:3px solid #ffd700; box-shadow:0 0 20px rgba(255,215,0,.5); display:flex; align-items:center; justify-content:center; animation:coinGlow 2s ease-in-out infinite alternate; }
-.coin-wrap img { width:100%; height:100%; object-fit:cover; }
-.gold-coin { background:linear-gradient(135deg,#ffd700,#ff8c00); }
-.silver-coin { background:linear-gradient(135deg,#c0c0c0,#808080); }
+.coin-wrap { width:72px; height:72px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:3px solid #ffd700; box-shadow:0 0 20px rgba(255,215,0,.5); animation:coinGlow 2s ease-in-out infinite alternate; }
+.coin-emoji { font-size:34px; }
+.gold-coin { background: radial-gradient(circle at 35% 30%, #fff6c9, #ffd700 45%, #b8860b 100%); }
+.silver-coin { background: radial-gradient(circle at 35% 30%, #ffffff, #c0c0c0 45%, #808080 100%); border-color:#d9d9d9; box-shadow:0 0 20px rgba(200,200,200,.6); }
 .emoji-prize { background:rgba(255,255,255,0.15); font-size:28px; border:3px solid rgba(255,215,0,0.5); }
 @keyframes coinGlow { from { box-shadow:0 0 10px rgba(255,215,0,.4); } to { box-shadow:0 0 28px rgba(255,215,0,.9); } }
 
 .of-perks { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-bottom:6px; }
 .perk { font-size:13px; font-weight:600; }
-.offer-terms { font-size:12px; color:#9aa3af; margin-top:12px; }
+.offer-terms { font-size:12px; color:#f0d5d5; margin-top:12px; }
 
 /* Other offer cards */
 .offers-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px; }
@@ -540,7 +418,7 @@ footer { background:#0d1014; color:#aeb6c2; padding:56px 0 0; }
   .emi-wrap { grid-template-columns:1fr; }
   .durga-offer-card { grid-template-columns:1fr; }
   .durga-right { display:none; }
-  .durga-side { height:220px; }
+  .durga-side { height:180px; }
   .nav-links { position:fixed; top:74px; left:0; right:0; background:#fff; flex-direction:column; padding:20px; gap:18px; border-bottom:1px solid var(--line); box-shadow:0 20px 40px rgba(0,0,0,.08); transform:translateY(-120%); transition:.3s; z-index:99; }
   .nav-links.open { transform:translateY(0); }
   .burger { display:flex; }
@@ -553,6 +431,9 @@ footer { background:#0d1014; color:#aeb6c2; padding:56px 0 0; }
   .slide-chip { display:none; }
   .foot-grid { grid-template-columns:1fr; }
   .hero-stats { flex-wrap:wrap; gap:16px; }
+  .durga-emoji { font-size:40px; }
   .coin-wrap { width:56px; height:56px; }
+  .coin-emoji { font-size:26px; }
   .emoji-prize { font-size:22px; }
+  .float-coin { font-size:20px; }
 }
