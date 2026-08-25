@@ -1,6 +1,6 @@
-/* ============================================================
-   RK AUTOMOBILES - Main JavaScript
-   ============================================================ */
+// ============================================================
+// RK AUTOMOBILES - Main JavaScript
+// ============================================================
 const WHATSAPP_NUMBER = "917004799172";
 const WA_BASE = "https://wa.me/" + WHATSAPP_NUMBER + "?text=";
 
@@ -14,21 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const burger = document.getElementById("burger");
   const navMenu = document.getElementById("navMenu");
 
-  window.addEventListener("scroll", function () {
-    nav.classList.toggle("scrolled", window.scrollY > 40);
-  });
-
-  burger.addEventListener("click", function () {
-    navMenu.classList.toggle("open");
-    burger.classList.toggle("active");
-  });
-
-  navMenu.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      navMenu.classList.remove("open");
-      burger.classList.remove("active");
+  if (nav) {
+    window.addEventListener("scroll", function () {
+      nav.classList.toggle("scrolled", window.scrollY > 40);
     });
-  });
+  }
+
+  if (burger && navMenu) {
+    burger.addEventListener("click", function () {
+      navMenu.classList.toggle("open");
+      burger.classList.toggle("active");
+    });
+
+    navMenu.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        navMenu.classList.remove("open");
+        burger.classList.remove("active");
+      });
+    });
+  }
 
   renderBikes();
   renderCatalogue();
@@ -73,7 +77,6 @@ function setupHeroSlideshow() {
     timer = setInterval(function () { window.goToSlide(current + 1); }, 4500);
   };
 
-  // Touch swipe
   let tx = 0;
   const heroEl = document.querySelector(".hero");
   if (heroEl) {
@@ -90,6 +93,7 @@ function setupHeroSlideshow() {
 /* ---------- Render Offers ---------- */
 function renderOffers() {
   const grid = document.getElementById("offersGrid");
+  if (!grid) return;
   const rest = OFFERS.filter(function (o) { return !o.gold; });
   grid.innerHTML = rest.map(function (o) {
     const waLink = WA_BASE + encodeURIComponent("Hi RK Automobiles, I'm interested in: " + o.title);
@@ -114,6 +118,8 @@ function populateSelects() {
   const bk = document.getElementById("bkBike");
   const sv = document.getElementById("svBike");
   const bkColor = document.getElementById("bkColor");
+  if (!bk || !sv || !bkColor) return;
+
   const opts = BIKES.map(function (b) {
     return '<option value="' + b.name + '">' + b.name + " - " + b.price + "</option>";
   }).join("");
@@ -130,11 +136,12 @@ function populateSelects() {
 /* ---------- Render Bikes ---------- */
 function renderBikes() {
   const grid = document.getElementById("bikeGrid");
+  if (!grid) return;
   grid.innerHTML = BIKES.map(function (b) {
     return `
     <div class="bike-card tilt" data-id="${b.id}">
       <div class="bike-media">
-        <img src="${b.img}" alt="${b.name}" loading="lazy">
+        <img src="${b.img}" alt="${b.name}" loading="lazy" onerror="this.style.opacity=0.3">
         ${b.tag ? `<span class="badge">${b.tag}</span>` : ""}
         <span class="cat">${b.category}</span>
       </div>
@@ -147,7 +154,7 @@ function renderBikes() {
           <li><strong>${b.mileage}</strong> Mileage</li>
         </ul>
         <div class="actions">
-          <button class="btn btn-dark view" data-id="${b.id}">View 3D</button>
+          <button class="btn btn-dark view" data-id="${b.id}">View Details</button>
           <button class="btn btn-wa book" data-id="${b.id}">Book on WhatsApp</button>
         </div>
       </div>
@@ -163,7 +170,9 @@ function renderBikes() {
 
 /* ---------- Render Catalogue ---------- */
 function renderCatalogue() {
-  document.getElementById("catalogueBody").innerHTML = FULL_CATALOGUE.map(function (m) {
+  const body = document.getElementById("catalogueBody");
+  if (!body) return;
+  body.innerHTML = FULL_CATALOGUE.map(function (m) {
     return `<tr><td>${m.name}</td><td class="ta-r">${m.price}</td></tr>`;
   }).join("");
 }
@@ -290,13 +299,16 @@ function setupTabs() {
 /* ---------- Scroll Top ---------- */
 function setupScrollTop() {
   const btn = document.getElementById("toTop");
-  window.addEventListener("scroll", function () {
-    btn.classList.toggle("show", window.scrollY > 500);
-  });
-  btn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-  document.getElementById("year").textContent = new Date().getFullYear();
+  if (btn) {
+    window.addEventListener("scroll", function () {
+      btn.classList.toggle("show", window.scrollY > 500);
+    });
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  const yr = document.getElementById("year");
+  if (yr) yr.textContent = new Date().getFullYear();
 }
 
 /* ---------- EMI Calculator ---------- */
@@ -340,14 +352,18 @@ function setupEMICalculator() {
       calc();
     });
   });
-  document.getElementById("emiApplyBtn").addEventListener("click", function () {
-    const msg = "💰 *Bike Loan Enquiry*%0A━━━━━━━━━━━━━━%0A" +
-      "Vehicle Price: " + encodeURIComponent(document.getElementById("emiPriceVal").textContent) + "%0A" +
-      "Down Payment: " + encodeURIComponent(document.getElementById("emiDownVal").textContent) + "%0A" +
-      "Tenure: " + tenure + " months%0A" +
-      "Estimated EMI: " + encodeURIComponent(document.getElementById("emiMonthly").textContent);
-    openWhatsApp(WA_BASE + msg);
-  });
+  
+  const applyBtn = document.getElementById("emiApplyBtn");
+  if (applyBtn) {
+    applyBtn.addEventListener("click", function () {
+      const msg = "💰 *Bike Loan Enquiry*%0A━━━━━━━━━━━━━━%0A" +
+        "Vehicle Price: " + encodeURIComponent(document.getElementById("emiPriceVal").textContent) + "%0A" +
+        "Down Payment: " + encodeURIComponent(document.getElementById("emiDownVal").textContent) + "%0A" +
+        "Tenure: " + tenure + " months%0A" +
+        "Estimated EMI: " + encodeURIComponent(document.getElementById("emiMonthly").textContent);
+      openWhatsApp(WA_BASE + msg);
+    });
+  }
   calc();
 }
 
