@@ -96,7 +96,7 @@ function renderOffers() {
   if (!grid) return;
   const rest = OFFERS.filter(function (o) { return !o.gold; });
   grid.innerHTML = rest.map(function (o) {
-    const waLink = WA_BASE + encodeURIComponent("Hi RK AUTOMOBILES, I'm interested in: " + o.title);
+    const waLink = WA_BASE + encodeURIComponent("Hi RK Automobiles, I'm interested in: " + o.title);
     return `
     <div class="offer-card${o.alt ? " alt" : ""}">
       <div class="offer-top">
@@ -168,7 +168,7 @@ function renderBikes() {
   });
 }
 
-/* ---------- Render Catalogue ---------- */
+/* ---------- Render Catalogue (With Enquire Buttons) ---------- */
 function renderCatalogue() {
   const body = document.getElementById("catalogueBody");
   if (!body) return;
@@ -177,13 +177,14 @@ function renderCatalogue() {
     const waLink = WA_BASE + encodeURIComponent(msg);
     return `<tr>
       <td><strong>${m.name}</strong></td>
-      <td class="ta-r" style="color:var(--red);font-weight:700;">${m.price}</td>
-      <td style="text-align:center;padding:10px;">
-        <a href="${waLink}" target="_blank" class="btn btn-wa" style="padding:7px 12px;font-size:12px;border-radius:8px;display:inline-flex;">Enquire</a>
+      <td class="ta-r" style="color:var(--red); font-weight:700;">${m.price}</td>
+      <td style="text-align:center; padding:8px;">
+        <a href="${waLink}" target="_blank" class="btn btn-wa" style="padding:6px 14px; font-size:12px; border-radius:6px; margin:0; display:inline-flex;">Enquire</a>
       </td>
     </tr>`;
   }).join("");
 }
+
 /* ---------- Book a Bike (form) ---------- */
 function bookBikeNow() {
   const bike = document.getElementById("bkBike").value;
@@ -341,7 +342,7 @@ function setupEMICalculator() {
     const total = emi * tenure;
     document.getElementById("emiPriceVal").textContent = fmt(price);
     document.getElementById("emiDownVal").textContent = fmt(down);
-    document.getElementById("emiRateVal").textContent = rate + "%";
+    document.getElementById("emiRateVal").textContent = fmt(rate) + "%";
     document.getElementById("emiMonthly").textContent = fmt(emi) + "/mo";
     document.getElementById("emiLoanAmt").textContent = fmt(principal);
     document.getElementById("emiInterest").textContent = fmt(total - principal);
