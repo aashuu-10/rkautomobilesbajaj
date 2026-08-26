@@ -177,9 +177,9 @@ function renderCatalogue() {
     const waLink = WA_BASE + encodeURIComponent(msg);
     return `<tr>
       <td><strong>${m.name}</strong></td>
-      <td class="ta-r" style="color:var(--red); font-weight:700;">${m.price}</td>
-      <td style="text-align:center;">
-        <a href="${waLink}" target="_blank" class="btn btn-wa" style="padding:6px 14px; font-size:12px; border-radius:6px; margin:0; width:100%; max-width:120px;">Enquire</a>
+      <td class="ta-r" style="color:var(--red);font-weight:700;">${m.price}</td>
+      <td style="text-align:center;padding:10px;">
+        <a href="${waLink}" target="_blank" class="btn btn-wa" style="padding:7px 12px;font-size:12px;border-radius:8px;display:inline-flex;">Enquire</a>
       </td>
     </tr>`;
   }).join("");
