@@ -538,4 +538,11 @@ footer { background:#0d1014; color:#aeb6c2; padding:56px 0 0; }
   .coin-emoji { font-size:26px; }
   .emoji-prize { font-size:22px; }
   .float-coin { font-size:20px; }
+  
+  /* Make table scrollable and buttons fit on mobile */
+  .cat-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 10px; }
+  table { min-width: 450px; }
+  tbody td { padding: 12px 10px; font-size: 13.5px; }
+  thead th { padding: 12px 10px; font-size: 12px; }
+  .ta-c { text-align: center; }
 }
