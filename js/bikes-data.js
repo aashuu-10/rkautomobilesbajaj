@@ -1,5 +1,5 @@
 // ============================================================
-// RK AUTOMOBILES - Official Showroom Price List Data
+// RK AUTOMOBILES - Clean Bike Names & Official Prices
 // ============================================================
 const BIKES = [
   {
@@ -35,7 +35,7 @@ const BIKES = [
     desc: "The fully-faired race machine with dual-channel ABS."
   },
   {
-    id: "ns200", name: "Pulsar NS200 LED", category: "Sport", price: "₹1,40,367",
+    id: "ns200", name: "Pulsar NS200", category: "Sport", price: "₹1,40,367",
     cc: "199.5 cc", power: "24.13 bhp", mileage: "36 kmpl", tag: "Popular",
     img: "images/bikes/pulsarns200glossyebonyblack.webp",
     gallery: ["images/bikes/pulsarns200glossyebonyblack.webp", "images/bikes/pulsarns200metallicpearlwhite.webp"],
@@ -43,7 +43,7 @@ const BIKES = [
     desc: "The original street-sport icon with twin-projector LED headlamps."
   },
   {
-    id: "n250", name: "Pulsar N250 UG", category: "Sport", price: "₹1,46,220",
+    id: "n250", name: "Pulsar N250", category: "Sport", price: "₹1,46,220",
     cc: "249 cc", power: "24.1 bhp", mileage: "40 kmpl", tag: "",
     img: "images/bikes/pulsarn250brooklynblack.webp",
     gallery: ["images/bikes/pulsarn250brooklynblack.webp", "images/bikes/pulsarn250glossyracingred.webp", "images/bikes/pulsarn250pearlmetallicwhite.webp"],
@@ -51,7 +51,7 @@ const BIKES = [
     desc: "Aggressive new-gen Pulsar with muscular tank and full-LED lighting."
   },
   {
-    id: "pulsar220f", name: "Pulsar 220F UG", category: "Sport", price: "₹1,40,391",
+    id: "pulsar220f", name: "Pulsar 220F", category: "Sport", price: "₹1,40,391",
     cc: "220 cc", power: "20.4 bhp", mileage: "40 kmpl", tag: "Legend",
     img: "images/bikes/pulsar220fblackinkblue.webp",
     gallery: ["images/bikes/pulsar220fblackinkblue.webp", "images/bikes/pulsar220fblackcherryred.webp", "images/bikes/pulsar220fblackcopperbeige.webp", "images/bikes/pulsar220fblackgold.webp"],
@@ -59,15 +59,7 @@ const BIKES = [
     desc: "The legendary semi-faired Pulsar 220F with raw power and timeless styling."
   },
   {
-    id: "n1604v", name: "Pulsar N160 USD Split Seat", category: "Sport", price: "₹1,40,868",
-    cc: "164.5 cc", power: "18.24 bhp", mileage: "49 kmpl", tag: "",
-    img: "images/bikes/pulsarn1604vatlanticblue.webp",
-    gallery: ["images/bikes/pulsarn1604vatlanticblue.webp", "images/bikes/pulsarn1604vbrooklynblack.webp", "images/bikes/pulsarn1604vpearlmetallicwhite.webp"],
-    colors: ["Atlantic Blue", "Brooklyn Black", "Pearl Metallic White"],
-    desc: "4-valve N160 with USD forks, stronger low-end torque, and refined performance."
-  },
-  {
-    id: "ns160", name: "Pulsar NS160 ABS", category: "Sport", price: "₹1,27,245",
+    id: "ns160", name: "Pulsar NS160", category: "Sport", price: "₹1,27,245",
     cc: "160.3 cc", power: "17.03 bhp", mileage: "44 kmpl", tag: "Popular",
     img: "images/bikes/pulsarns160pewtergrey.webp",
     gallery: ["images/bikes/pulsarns160pewtergrey.webp", "images/bikes/pulsarns160ebonyblack.webp", "images/bikes/pulsarns160pearlmetallicwhite.webp", "images/bikes/pulsarns160cocktailwinered.webp"],
@@ -75,7 +67,7 @@ const BIKES = [
     desc: "NS-series streetfighter with perimeter frame and sharp muscular styling."
   },
   {
-    id: "n160", name: "Pulsar N160 UG", category: "Sport", price: "₹1,32,656",
+    id: "n160", name: "Pulsar N160", category: "Sport", price: "₹1,22,966",
     cc: "164.82 cc", power: "15.68 bhp", mileage: "47 kmpl", tag: "Best Seller",
     img: "images/bikes/pulsarn1602vbajajpulsarn160rightsideview.webp",
     gallery: ["images/bikes/pulsarn1602vbajajpulsarn160rightsideview.webp", "images/bikes/pulsarn1602vpolarskybluesplitseat.webp", "images/bikes/pulsarn1602vracingred.webp"],
@@ -91,12 +83,12 @@ const BIKES = [
     desc: "Classic sporty handling and iconic Pulsar performance."
   },
   {
-    id: "pulsar150", name: "Pulsar 150 TD UG", category: "Commuter", price: "₹1,18,094",
+    id: "pulsar150", name: "Pulsar 150", category: "Commuter", price: "₹1,14,165",
     cc: "149.5 cc", power: "14 bhp", mileage: "47.5 kmpl", tag: "",
     img: "images/bikes/pulsar150bajajnewpulser150rightsideview.webp",
     gallery: ["images/bikes/pulsar150bajajnewpulser150rightsideview.webp"],
     colors: ["Black", "Red", "Blue"],
-    desc: "Evergreen Pulsar 150 with twin disc braking and trusted performance."
+    desc: "Evergreen Pulsar 150 with trusted performance and outstanding value."
   },
   {
     id: "freedom", name: "Freedom 125 CNG", category: "CNG", price: "₹1,02,306",
@@ -107,7 +99,7 @@ const BIKES = [
     desc: "World's first CNG motorcycle with dual-fuel capability and unbeatable running cost."
   },
   {
-    id: "ns125", name: "Pulsar NS125 ABS", category: "Sport", price: "₹1,06,047",
+    id: "ns125", name: "Pulsar NS125", category: "Sport", price: "₹1,01,828",
     cc: "124.45 cc", power: "11.8 bhp", mileage: "50 kmpl", tag: "",
     img: "images/bikes/pulsarns125black.webp",
     gallery: ["images/bikes/pulsarns125black.webp", "images/bikes/pulsarns125orange.webp", "images/bikes/pulsarns125pearlmettalicwhite.webp"],
@@ -123,15 +115,15 @@ const BIKES = [
     desc: "Modern commuter-sport Pulsar with great mileage."
   },
   {
-    id: "pulsar125", name: "Pulsar 125 Premium Split Seat", category: "Commuter", price: "₹1,03,002",
+    id: "pulsar125", name: "Pulsar 125", category: "Commuter", price: "₹91,910",
     cc: "124.4 cc", power: "11.8 bhp", mileage: "51.46 kmpl", tag: "Popular",
     img: "images/bikes/bajajpulsar125[2026]rightsideview.webp",
     gallery: ["images/bikes/bajajpulsar125[2026]rightsideview.webp"],
     colors: ["Red", "Black"],
-    desc: "India's favourite Pulsar. Sporty commuter with high mileage and premium split seat."
+    desc: "India's favourite Pulsar. Sporty commuter with high mileage."
   },
   {
-    id: "chetak", name: "Bajaj Chetak EV", category: "EV", price: "₹1,15,000",
+    id: "chetak", name: "Bajaj Chetak", category: "EV", price: "₹1,15,000",
     cc: "EV", power: "3.1 kW", mileage: "131 km", tag: "EV",
     img: "images/bikes/chetakbrooklynblack.webp",
     gallery: ["images/bikes/chetakbrooklynblack.webp", "images/bikes/chetakcyberwhite.webp", "images/bikes/chetakmattecoarsegrey.webp"],
@@ -139,7 +131,7 @@ const BIKES = [
     desc: "Premium electric scooter with retro-modern style and long real-world range."
   },
   {
-    id: "platina100", name: "Platina 100 ES Drum", category: "Commuter", price: "₹73,095",
+    id: "platina100", name: "Platina 100", category: "Commuter", price: "₹73,095",
     cc: "102 cc", power: "7.9 PS", mileage: "70 kmpl", tag: "Mileage",
     img: "images/bikes/platina100blackblue.webp",
     gallery: ["images/bikes/platina100blackblue.webp", "images/bikes/platina100blackgold.webp", "images/bikes/platina100blacksilver.webp"],
@@ -188,52 +180,52 @@ const OFFERS = [
 ];
 
 const FULL_CATALOGUE = [
-  { name: "DOMINAR D 400 (00JF62)", price: "₹2,08,270" },
-  { name: "PULSAR NS 400 (00JL32)", price: "₹1,86,015" },
-  { name: "DOMINAR D 250 (00JF53)", price: "₹1,86,835" },
-  { name: "PULSAR RS 200 (00DT22)", price: "₹1,81,295" },
-  { name: "PULSAR NS 200 DC (00JL25)", price: "₹1,50,668" },
-  { name: "PULSAR N 250 UG (00JR34)", price: "₹1,46,220" },
-  { name: "PULSAR 220 UG NEW (00DK15)", price: "₹1,40,391" },
-  { name: "PULSAR N 160 S S USD SPLIT SEAT", price: "₹1,40,868" },
-  { name: "PULSAR NS 200 LED (00JL30)", price: "₹1,40,367" },
-  { name: "PULSAR NS 160 DC (00JF45)", price: "₹1,35,747" },
-  { name: "PULSAR 220 UG (00DK14)", price: "₹1,35,045" },
-  { name: "AVENGER 220 CRUISE+STREET", price: "₹1,34,856" },
-  { name: "PULSAR N 160 UG (00JR83)", price: "₹1,32,656" },
-  { name: "PULSAR N 160 S S USD SINGLE SEAT", price: "₹1,31,912" },
-  { name: "PULSAR N 160 UG (00JR33)", price: "₹1,29,381" },
-  { name: "PULSAR NS 160 DI ABS (00JF55)", price: "₹1,27,245" },
-  { name: "PULSAR 180 (00DJ16)", price: "₹1,23,552" },
-  { name: "PULSAR N 160 USD S.S (00JR82)", price: "₹1,23,387" },
-  { name: "PULSAR N 160 USD S.S (00JR63)", price: "₹1,20,283" },
-  { name: "PULSAR N 160 TD DC S.S (00JR52)", price: "₹1,20,012" },
-  { name: "PULSAR 150 TD UG (00DH69)", price: "₹1,18,094" },
-  { name: "PULSAR N 160 TC (00JR37+00JR45)", price: "₹1,17,658" },
-  { name: "PULSAR N 160 K17KC", price: "₹1,17,127" },
-  { name: "PULSAR 150 SD UG (00DH68)", price: "₹1,14,165" },
-  { name: "AVENGER 160 STREET (00PD39)", price: "₹1,13,103" },
-  { name: "PULSAR 150 TD UG (00DH63)", price: "₹1,11,982" },
-  { name: "PULSAR 150 SD (00DH59)", price: "₹1,08,236" },
-  { name: "PULSAR NS 125 UG ABS (00JF61)", price: "₹1,06,047" },
-  { name: "PULSAR 150 SD UG (00DH66)", price: "₹1,05,333" },
-  { name: "PULSAR 125 PREMIUM SPLIT SEAT", price: "₹1,03,002" },
-  { name: "FREEDOM 125 NG04 DI (00JH27)", price: "₹1,02,306" },
-  { name: "PULSAR NS 125 (00JF58)", price: "₹1,01,828" },
-  { name: "PULSAR 125 STD SPLIT SEAT NEW", price: "₹98,855" },
-  { name: "PULSAR 125 STD SINGLE SEAT NEW", price: "₹97,857" },
-  { name: "PULSAR NS 125 (00JF46)", price: "₹94,070" },
-  { name: "PULSAR 125 CF S.S (00DH70)", price: "₹94,164" },
-  { name: "PULSAR 125 SINGLE SEAT NEW", price: "₹91,910" },
-  { name: "PULSAR 125 CF S.S (00DH71)", price: "₹91,987" },
-  { name: "PULSAR 125 NEON DI NEW (00DH73)", price: "₹91,249" },
-  { name: "PULSAR 125 DI S.S (00DH58)", price: "₹88,311" },
-  { name: "PULSAR 125 DI (00DH62)", price: "₹86,175" },
-  { name: "PULSAR 125 (00DH41)", price: "₹83,414" },
-  { name: "PULSAR 125 NEON DI (00DH65)", price: "₹82,081" },
-  { name: "PULSAR 125 NEON (00DH50)", price: "₹79,166" },
-  { name: "PLATINA 110 DRUM (00JK38)", price: "₹75,862" },
-  { name: "CT-110 X NEW (00DY13)", price: "₹75,137" },
-  { name: "PLATINA 100 ES DRUM (00JK39)", price: "₹73,095" },
-  { name: "PLATINA 100 ES DRUM (00PF37)", price: "₹63,779" }
+  { name: "Dominar 400", price: "₹2,08,270" },
+  { name: "Pulsar NS400Z", price: "₹1,86,015" },
+  { name: "Dominar 250", price: "₹1,86,835" },
+  { name: "Pulsar RS200", price: "₹1,81,295" },
+  { name: "Pulsar NS200", price: "₹1,50,668" },
+  { name: "Pulsar N250", price: "₹1,46,220" },
+  { name: "Pulsar 220F", price: "₹1,40,391" },
+  { name: "Pulsar N160", price: "₹1,40,868" },
+  { name: "Pulsar NS200", price: "₹1,40,367" },
+  { name: "Pulsar NS160", price: "₹1,35,747" },
+  { name: "Pulsar 220F", price: "₹1,35,045" },
+  { name: "Avenger 220", price: "₹1,34,856" },
+  { name: "Pulsar N160", price: "₹1,32,656" },
+  { name: "Pulsar N160", price: "₹1,31,912" },
+  { name: "Pulsar N160", price: "₹1,29,381" },
+  { name: "Pulsar NS160", price: "₹1,27,245" },
+  { name: "Pulsar 180", price: "₹1,23,552" },
+  { name: "Pulsar N160", price: "₹1,23,387" },
+  { name: "Pulsar N160", price: "₹1,20,283" },
+  { name: "Pulsar N160", price: "₹1,20,012" },
+  { name: "Pulsar 150", price: "₹1,18,094" },
+  { name: "Pulsar N160", price: "₹1,17,658" },
+  { name: "Pulsar N160", price: "₹1,17,127" },
+  { name: "Pulsar 150", price: "₹1,14,165" },
+  { name: "Avenger 160", price: "₹1,13,103" },
+  { name: "Pulsar 150", price: "₹1,11,982" },
+  { name: "Pulsar 150", price: "₹1,08,236" },
+  { name: "Pulsar NS125", price: "₹1,06,047" },
+  { name: "Pulsar 150", price: "₹1,05,333" },
+  { name: "Pulsar 125", price: "₹1,03,002" },
+  { name: "Freedom 125 CNG", price: "₹1,02,306" },
+  { name: "Pulsar NS125", price: "₹1,01,828" },
+  { name: "Pulsar 125", price: "₹98,855" },
+  { name: "Pulsar 125", price: "₹97,857" },
+  { name: "Pulsar NS125", price: "₹94,070" },
+  { name: "Pulsar 125", price: "₹94,164" },
+  { name: "Pulsar 125", price: "₹91,910" },
+  { name: "Pulsar 125", price: "₹91,987" },
+  { name: "Pulsar 125", price: "₹91,249" },
+  { name: "Pulsar 125", price: "₹88,311" },
+  { name: "Pulsar 125", price: "₹86,175" },
+  { name: "Pulsar 125", price: "₹83,414" },
+  { name: "Pulsar 125", price: "₹82,081" },
+  { name: "Pulsar 125", price: "₹79,166" },
+  { name: "Platina 110", price: "₹75,862" },
+  { name: "CT 110X", price: "₹75,137" },
+  { name: "Platina 100", price: "₹73,095" },
+  { name: "Platina 100", price: "₹63,779" }
 ];
