@@ -1,545 +1,1208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <meta name="google-site-verification" content="ZNzfKHQaMgcQT0nSNOQw4rreUlNfC5EnKpzUVdwhMEw" />
-  <title>RK AUTOMOBILES | Bajaj Bike Showroom - Book a Bike & Service</title>
-  <meta name="description" content="RK Automobiles - Authorised Bajaj bike showroom in Chandrapura. Explore the full Bajaj range, calculate your EMI, and book your bike or service online via WhatsApp." />
-  <link rel="canonical" href="https://rkautomobiles.co.in/" />
-  <meta property="og:title" content="RK Automobiles | Authorised Bajaj Showroom - Chandrapura" />
-  <meta property="og:description" content="Explore the full Bajaj range, calculate your EMI, and book a bike or service instantly on WhatsApp." />
-  <meta property="og:image" content="https://rkautomobiles.co.in/images/logo/logo.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://rkautomobiles.co.in/" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="images/logo/logo.jpg" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoDealer",
-    "name": "RK Automobiles",
-    "image": "https://rkautomobiles.co.in/images/logo/logo.jpg",
-"url": "https://rkautomobiles.co.in/",
-    "telephone": "+917004799172",
-    "email": "rkautomobilesbokaro@gmail.com",
-    "priceRange": "INR",
-    "brand": { "@type": "Brand", "name": "Bajaj" },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Station Rd, Choubey Market",
-      "addressLocality": "Chandrapura",
-      "addressRegion": "Jharkhand",
-      "postalCode": "828403",
-      "addressCountry": "IN"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "09:30",
-        "closes": "20:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Sunday"],
-        "opens": "10:00",
-        "closes": "17:00"
-      }
-    ]
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>BCCL A-R</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#12161b">
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  :root{
+    --bg:#12161b;
+    --panel:#1a2027;
+    --panel-alt:#212933;
+    --border:#2b3540;
+    --text:#e9edf2;
+    --text-dim:#8b96a3;
+    --amber:#f5a623;
+    --amber-dim:#a97a2b;
+    --green:#35c975;
+    --red:#ff5c5c;
+    --blue:#4d9eff;
+    --purple:#b083f0;
+    --plate-dev:#3b6ea5;
+    --plate-lw:#c17a2b;
+    --plate-ccs:#5a9e6f;
+    --plate-lhd:#a15a9e;
+    --plate-loco:#c1522b;
+    --radius:10px;
+    --font-ui: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-mono: ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   }
-  </script>
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);font-family:var(--font-ui);}
+  #root{max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;display:flex;flex-direction:column;}
+  button{font-family:inherit;cursor:pointer;}
+  input,select{font-family:inherit;}
+  ::selection{background:var(--amber);color:#12161b;}
+
+  /* ---------- Landing ---------- */
+  .landing{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 24px;text-align:center;}
+  .landing-badge{width:80px;height:80px;border-radius:14px;overflow:hidden;margin-bottom:18px;box-shadow:0 4px 14px rgba(0,0,0,.35);}
+  .landing-badge img{width:100%;height:100%;object-fit:cover;display:block;}
+  .landing h1{font-size:22px;font-weight:800;margin:0 0 4px;letter-spacing:-0.3px;}
+  .landing p.tag{color:var(--text-dim);font-size:13px;margin:0 0 40px;letter-spacing:.3px;text-transform:uppercase;font-weight:600;}
+  .landing-buttons{width:100%;display:flex;flex-direction:column;gap:14px;}
+  .land-btn{width:100%;padding:20px 18px;border-radius:var(--radius);border:1px solid var(--border);background:var(--panel);text-align:left;display:flex;align-items:center;gap:14px;transition:transform .12s ease, border-color .12s ease;}
+  .land-btn:active{transform:scale(.97);}
+  .land-btn.main{border-color:var(--amber-dim);background:linear-gradient(135deg,#20180a,#1a2027);}
+  .land-btn .ic{width:42px;height:42px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+  .land-btn.main .ic{background:var(--amber);color:#1a1300;}
+  .land-btn.section .ic{background:var(--panel-alt);color:var(--amber);border:1px solid var(--border);}
+  .land-btn .txt strong{display:block;font-size:15px;font-weight:700;}
+  .land-btn .txt span{display:block;font-size:12px;color:var(--text-dim);margin-top:2px;}
+  .land-foot{margin-top:36px;font-size:11px;color:var(--text-dim);}
+
+  /* ---------- Login panel ---------- */
+  .login-view{flex:1;display:flex;flex-direction:column;padding:20px;}
+  .topbar{display:flex;align-items:center;gap:12px;margin-bottom:26px;}
+  .backbtn{width:36px;height:36px;border-radius:9px;background:var(--panel);border:1px solid var(--border);color:var(--text);font-size:16px;display:flex;align-items:center;justify-content:center;}
+  .topbar h2{font-size:17px;margin:0;font-weight:700;}
+  .login-card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:24px 20px;margin-top:8px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:12px;color:var(--text-dim);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
+  .field input, .field select{width:100%;padding:13px 12px;border-radius:8px;border:1px solid var(--border);background:var(--panel-alt);color:var(--text);font-size:15px;}
+  .field input:focus, .field select:focus{outline:none;border-color:var(--amber);}
+  .btn{padding:13px 16px;border-radius:8px;border:none;font-weight:700;font-size:14px;width:100%;}
+  .btn.primary{background:var(--amber);color:#1a1300;}
+  .btn.ghost{background:transparent;border:1px solid var(--border);color:var(--text);}
+  .btn.danger{background:var(--red);color:#2a0505;}
+  .btn.sm{width:auto;padding:9px 14px;font-size:12.5px;}
+  .err{color:var(--red);font-size:12.5px;margin:-6px 0 14px;min-height:16px;}
+  .hint{font-size:11.5px;color:var(--text-dim);margin-top:18px;line-height:1.5;text-align:center;}
+
+  /* ---------- App shell ---------- */
+  .app-shell{display:none;flex-direction:column;flex:1;min-height:100vh;}
+  .app-shell.active{display:flex;}
+  .header{background:var(--panel);border-bottom:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5;}
+  .header .who strong{display:block;font-size:14px;}
+  .header .who span{display:block;font-size:11px;color:var(--text-dim);margin-top:1px;}
+  .icon-btn{width:34px;height:34px;border-radius:8px;background:var(--panel-alt);border:1px solid var(--border);color:var(--text-dim);font-size:15px;display:flex;align-items:center;justify-content:center;}
+  .main-content{flex:1;padding:16px;padding-bottom:90px;overflow-y:auto;}
+  .view{display:none;}
+  .view.active{display:block;}
+
+  .bottomnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:var(--panel);border-top:1px solid var(--border);display:flex;padding:6px 4px 10px;z-index:10;}
+  .navbtn{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;color:var(--text-dim);padding:6px 2px;border-radius:8px;font-size:10px;font-weight:600;}
+  .navbtn .navic{font-size:18px;}
+  .navbtn.on{color:var(--amber);}
+
+  /* plate badge - signature element */
+  .plate{display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:800;font-size:10px;letter-spacing:.5px;padding:3px 7px;border-radius:5px;color:#fff;position:relative;}
+  .plate::before,.plate::after{content:"";position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.55);top:2px;}
+  .plate::before{left:2px;} .plate::after{right:2px;}
+  .plate.DEV{background:var(--plate-dev);} .plate.LW{background:var(--plate-lw);}
+  .plate.CCS{background:var(--plate-ccs);} .plate.LHD4{background:var(--plate-lhd);}
+  .plate.LOCO{background:var(--plate-loco);}
+
+  h3.section-title{font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--text-dim);margin:22px 0 10px;font-weight:700;}
+  h3.section-title:first-child{margin-top:0;}
+
+  .cards-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;}
+  .stat-card{flex:1 0 100px;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 12px;text-align:center;}
+  .stat-card .n{font-size:24px;font-weight:800;}
+  .stat-card .l{font-size:10.5px;color:var(--text-dim);margin-top:2px;font-weight:600;text-transform:uppercase;}
+
+  .list-item{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:13px 14px;margin-bottom:9px;display:flex;align-items:center;justify-content:between;gap:10px;}
+  .list-item .info{flex:1;min-width:0;}
+  .list-item .info .name{font-weight:700;font-size:14.5px;}
+  .list-item .info .meta{font-size:11.5px;color:var(--text-dim);margin-top:2px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+  .code-tag{font-family:var(--font-mono);font-size:10.5px;background:var(--panel-alt);padding:2px 6px;border-radius:4px;color:var(--amber);}
+
+  .status-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;}
+  .chip{padding:7px 10px;border-radius:7px;border:1px solid var(--border);background:var(--panel-alt);font-size:11.5px;font-weight:700;color:var(--text-dim);}
+  .chip.P.on{background:var(--green);border-color:var(--green);color:#052712;}
+  .chip.A.on{background:var(--red);border-color:var(--red);color:#2a0505;}
+  .chip.H.on{background:var(--amber);border-color:var(--amber);color:#1a1300;}
+  .chip.L.on{background:var(--purple);border-color:var(--purple);color:#1c0d2c;}
+  .chip.Hol.on{background:var(--blue);border-color:var(--blue);color:#051325;}
+
+  .fab-row{display:flex;gap:8px;margin-bottom:14px;}
+  .empty{text-align:center;padding:40px 20px;color:var(--text-dim);font-size:13px;}
+  .table-mini{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .table-mini th{text-align:left;color:var(--text-dim);font-weight:600;padding:6px 4px;border-bottom:1px solid var(--border);font-size:10.5px;text-transform:uppercase;}
+  .table-mini td{padding:8px 4px;border-bottom:1px solid var(--border);}
+  .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:20;display:none;align-items:flex-end;justify-content:center;}
+  .modal-bg.active{display:flex;}
+  .modal{width:100%;max-width:480px;background:var(--panel);border-radius:16px 16px 0 0;padding:20px;max-height:88vh;overflow-y:auto;}
+  .modal h3{margin:0 0 16px;font-size:16px;}
+  .modal-actions{display:flex;gap:8px;margin-top:6px;}
+  .toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:var(--panel-alt);border:1px solid var(--amber-dim);color:var(--text);padding:11px 18px;border-radius:9px;font-size:12.5px;z-index:30;display:none;max-width:90%;text-align:center;}
+
+  /* ---------- Desktop / website layout ---------- */
+  @media (min-width: 860px){
+    #root{ max-width:1200px; }
+    .landing, .login-view{ max-width:440px; width:100%; align-self:center; }
+    .app-shell.active{
+      display:grid;
+      grid-template-columns: 230px 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "nav header" "nav main";
+      min-height:100vh;
+    }
+    .header{ grid-area:header; }
+    .main-content{ grid-area:main; padding:28px 40px; padding-bottom:28px; max-width:1000px; }
+    .bottomnav{
+      grid-area:nav; position:static; width:auto; max-width:none; left:auto; bottom:auto; transform:none;
+      flex-direction:column; align-items:stretch; justify-content:flex-start; gap:2px;
+      padding:20px 10px; border-top:none; border-right:1px solid var(--border);
+    }
+    .navbtn{ flex-direction:row; justify-content:flex-start; gap:10px; padding:12px 14px; font-size:13px; border-radius:8px; }
+    .navbtn.on{ background:var(--panel-alt); }
+    .navbtn .navic{ font-size:17px; }
+    .cards-row{ overflow-x:visible; flex-wrap:wrap; }
+    .stat-card{ flex:1 1 160px; }
+    .modal-bg{ align-items:center; }
+    .modal{ border-radius:16px; max-width:460px; }
+  }
+</style>
 </head>
 <body>
+<div id="root">
 
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="logo">
-        <img src="images/logo/logo.jpg" alt="RK Automobiles logo" class="logo-img" onerror="this.style.display='none'" />
-        <span class="logo-text">
-          <b>RK AUTOMOBILES</b>
-          <span>Bajaj Showroom</span>
-        </span>
-      </a>
-      <ul class="nav-links" id="navMenu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#offers">Offers</a></li>
-        <li><a href="#bikes">Bikes</a></li>
-        <li><a href="#catalogue">Full Catalogue</a></li>
-        <li><a href="#emi">EMI Calculator</a></li>
-        <li><a href="#booking">Book</a></li>
-        <li><a href="#branches">Branches</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#booking" class="nav-cta">Book Now</a></li>
-      </ul>
-      <button class="burger" id="burger" aria-label="Menu">
-        <span></span><span></span><span></span>
+  <!-- LANDING -->
+  <div class="landing" id="view-landing">
+    <div class="landing-badge"><img src="logo.png" alt="BCCL logo"></div>
+    <h1>BCCL A-R</h1>
+    <p class="tag">Section Attendance System</p>
+    <div class="landing-buttons">
+      <button class="land-btn main" onclick="goto('login-super')">
+        <div class="ic">&#9733;</div>
+        <div class="txt"><strong>Super Admin</strong><span>Manage all sections & admins</span></div>
+      </button>
+      <button class="land-btn section" onclick="goto('login-section')">
+        <div class="ic">&#128274;</div>
+        <div class="txt"><strong>Section Admin</strong><span>Development, Longwall, CCS, LHD4, LOCO</span></div>
       </button>
     </div>
-  </nav>
+    <div class="land-foot">Authorized personnel only</div>
+  </div>
 
-  <!-- ===== Hero with Sliding Bikes ===== -->
-  <header class="hero" id="home">
-    <div class="hero-slideshow">
-      <div class="hero-slide active" style="background-image:url('images/bikes/pulsarns400zpearlmetallicwhite.webp')"></div>
-      <div class="hero-slide" style="background-image:url('images/bikes/dominar400black.webp')"></div>
-      <div class="hero-slide" style="background-image:url('images/bikes/pulsarns200glossyebonyblack.webp')"></div>
-      <div class="hero-slide" style="background-image:url('images/bikes/pulsar220fblackinkblue.webp')"></div>
-      <div class="hero-slide" style="background-image:url('images/bikes/chetakbrooklynblack.webp')"></div>
-    </div>
-    <div class="hero-overlay"></div>
-
-    <div class="slide-dots">
-      <span class="dot active" onclick="goToSlide(0)"></span>
-      <span class="dot" onclick="goToSlide(1)"></span>
-      <span class="dot" onclick="goToSlide(2)"></span>
-      <span class="dot" onclick="goToSlide(3)"></span>
-      <span class="dot" onclick="goToSlide(4)"></span>
-    </div>
-
-    <div class="slide-chip">
-      <span class="slide-chip-tag" id="slideTag">⚡ 40 PS Power</span>
-      <span class="slide-chip-name" id="slideName">Pulsar NS400Z</span>
-    </div>
-
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="hero-kicker">Authorised Bajaj Dealer</span>
-        <h1>Ride the <em>Legend.</em><br/>Experience the Pulsar.</h1>
-        <p class="lead">Welcome to RK AUTOMOBILES — your trusted Bajaj showroom. Explore the complete range of Bajaj motorcycles, book your dream bike, and get expert service — all in one place.</p>
-        <div class="hero-actions">
-          <a href="#bikes" class="btn btn-red">Explore Bikes</a>
-          <a href="#booking" class="btn btn-outline-white">Book on WhatsApp</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><b>25+</b><span>Years of Trust</span></div>
-          <div class="stat"><b>5000+</b><span>Happy Riders</span></div>
-          <div class="stat"><b>4.8★</b><span>Customer Rating</span></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===== Offers ===== -->
-  <section id="offers" class="offers-section">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Exclusive Deals</span>
-        <h2>Ongoing Offers</h2>
-        <p>Check out our latest showroom offers &amp; festive deals on your favourite Bajaj bikes.</p>
-      </div>
-
-      <!-- Durga Puja Special Card -->
-      <div class="durga-offer-card">
-
-        <!-- Floating Coins Layer -->
-        <div class="coin-bg">
-          <span class="float-coin gold" style="left:5%; animation-delay:0s;">🪙</span>
-          <span class="float-coin silver" style="left:15%; animation-delay:1.5s;">⚪</span>
-          <span class="float-coin gold" style="left:25%; animation-delay:3s;">🪙</span>
-          <span class="float-coin silver" style="left:40%; animation-delay:0.8s;">⚪</span>
-          <span class="float-coin gold" style="left:55%; animation-delay:2.2s;">🪙</span>
-          <span class="float-coin silver" style="left:68%; animation-delay:1s;">⚪</span>
-          <span class="float-coin gold" style="left:80%; animation-delay:2.8s;">🪙</span>
-          <span class="float-coin silver" style="left:90%; animation-delay:0.5s;">⚪</span>
-          <span class="float-coin gold" style="left:35%; animation-delay:4s;">🪙</span>
-          <span class="float-coin silver" style="left:75%; animation-delay:3.5s;">⚪</span>
-        </div>
-
-        <!-- Left Side Motif -->
-        <div class="durga-side durga-left">
-          <div class="durga-motif">
-            <div class="durga-glow"></div>
-            <span class="durga-emoji">🙏</span>
-            <span class="durga-label">Maa Durga</span>
-          </div>
-        </div>
-
-        <!-- Center Content -->
-        <div class="durga-center">
-          <div class="of-badge">⭐ Mega Offer</div>
-          <p class="of-sub">🎉 Ride Karo, Jeeto Dil Khol Ke!</p>
-          <h3 class="durga-headline">
-            इस दुर्गा पूजा हर बाइक खरीद पर<br/>
-            <span class="gold-text">1-10 ग्राम 24K Gold</span><br/>
-            जीतने का सुनहरा मौका!
-          </h3>
-
-          <div class="of-steps">
-            <div class="step"><span class="step-n">1</span><b>Buy a Bike</b><small>बाइक खरीदें</small></div>
-            <div class="step"><span class="step-n">2</span><b>Get Scratch Card</b><small>स्क्रैच कार्ड पाएं</small></div>
-            <div class="step"><span class="step-n">3</span><b>Scratch &amp; Win</b><small>स्क्रैच करें</small></div>
-            <div class="step"><span class="step-n">4</span><b>Win Prizes!</b><small>इनाम जीतें</small></div>
-          </div>
-
-          <h4 class="prizes-title">🏆 Guaranteed Scratch Card Prizes</h4>
-          <div class="prize-coins-row">
-            <div class="prize-coin-item">
-              <div class="coin-wrap gold-coin"><span class="coin-emoji">🪙</span></div>
-              <span>1-10g 24K Gold</span>
-            </div>
-            <div class="prize-coin-item">
-              <div class="coin-wrap silver-coin"><span class="coin-emoji">⚪</span></div>
-              <span>1-10g Silver Coin</span>
-            </div>
-            <div class="prize-coin-item">
-              <div class="coin-wrap emoji-prize">🍹</div>
-              <span>Mixer Grinder</span>
-            </div>
-            <div class="prize-coin-item">
-              <div class="coin-wrap emoji-prize">⌚</div>
-              <span>Smart Watch</span>
-            </div>
-            <div class="prize-coin-item">
-              <div class="coin-wrap emoji-prize">🎁</div>
-              <span>&amp; Many More!</span>
-            </div>
-          </div>
-
-          <div class="of-perks">
-            <span class="perk">✓ Low Down Payment</span>
-            <span class="perk">✓ Easy Finance</span>
-            <span class="perk">✓ Best Exchange Value</span>
-            <span class="perk">✓ Assured Gifts</span>
-          </div>
-
-          <a href="https://wa.me/917004799172?text=Hi%20RK%20Automobiles%2C%20I%20want%20to%20know%20more%20about%20the%20Durga%20Puja%20Gold%20Offer!"
-             target="_blank" class="btn btn-gold" style="width:100%;margin-top:20px;font-size:16px;">
-            💰 Claim This Offer on WhatsApp
-          </a>
-          <p class="offer-terms">Guaranteed prize on every scratch card! Valid during Durga Puja. Subject to T&amp;C.</p>
-        </div>
-
-        <!-- Right Side Motif -->
-        <div class="durga-side durga-right">
-          <div class="durga-motif">
-            <div class="durga-glow"></div>
-            <span class="durga-emoji">🕉️</span>
-            <span class="durga-label">Shubh Labh</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Other JS-rendered offers -->
-      <div class="offers-grid" id="offersGrid" style="margin-top:32px;"></div>
-
-      <p style="text-align:center;color:#5b6470;margin-top:22px;font-size:13px;">
-        Offers are updated by RK Automobiles. Please visit/contact the showroom for full terms &amp; eligibility.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== Bikes ===== -->
-  <section id="bikes">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Our Range</span>
-        <h2>Explore the Bajaj Line-up</h2>
-        <p>From the mighty Pulsar to the super-efficient Platina and the world's first CNG bike.</p>
-      </div>
-      <div class="bike-grid" id="bikeGrid"></div>
-      <p style="text-align:center;color:#5b6470;margin-top:26px;font-size:13px;">*Prices are indicative ex-showroom. Contact showroom for on-road price &amp; latest offers.</p>
-    </div>
-  </section>
-
-  <!-- ===== Full Catalogue ===== -->
-  <section id="catalogue" style="background:var(--soft);">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Complete Catalogue</span>
-        <h2>All Current Bajaj Models</h2>
-        <p>The full list of Bajaj motorcycles available at RK Automobiles with indicative prices.</p>
-      </div>
-      <div class="catalogue-wrap">
-        <div class="cat-scroll">
-          <table>
-            <thead><tr><th>Model</th><th class="ta-r">Indicative Price</th><th style="text-align:center;">Action</th></tr></thead>
-            <tbody id="catalogueBody"></tbody>
-          </table>
-        </div>
-        <div class="cat-note">*Ex-showroom price, may vary by state. Visit showroom for exact on-road pricing.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EMI Calculator ===== -->
-  <section id="emi">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Plan Your Purchase</span>
-        <h2>Bike Loan EMI Calculator</h2>
-        <p>Estimate your monthly installment instantly, then apply for finance directly on WhatsApp.</p>
-      </div>
-      <div class="emi-wrap">
-        <div class="emi-controls">
-          <div class="emi-field">
-            <div class="emi-label-row">
-              <label>Vehicle Price</label>
-              <span class="emi-value" id="emiPriceVal">₹1,50,000</span>
-            </div>
-            <input type="range" id="emiPrice" min="70000" max="250000" step="1000" value="150000" />
-          </div>
-          <div class="emi-field">
-            <div class="emi-label-row">
-              <label>Down Payment</label>
-              <span class="emi-value" id="emiDownVal">₹30,000</span>
-            </div>
-            <input type="range" id="emiDown" min="5000" max="150000" step="1000" value="30000" />
-          </div>
-          <div class="emi-field">
-            <div class="emi-label-row">
-              <label>Interest Rate (per annum)</label>
-              <span class="emi-value" id="emiRateVal">9.5%</span>
-            </div>
-            <input type="range" id="emiRate" min="7" max="16" step="0.25" value="9.5" />
-          </div>
-          <div class="emi-field">
-            <label style="margin-bottom:10px;display:block;">Loan Tenure</label>
-            <div class="emi-tenure">
-              <button type="button" class="tenure-btn" data-months="12">12 mo</button>
-              <button type="button" class="tenure-btn" data-months="24">24 mo</button>
-              <button type="button" class="tenure-btn active" data-months="36">36 mo</button>
-              <button type="button" class="tenure-btn" data-months="48">48 mo</button>
-            </div>
-          </div>
-        </div>
-        <div class="emi-result">
-          <span class="emi-result-label">Estimated Monthly EMI</span>
-          <div class="emi-amount" id="emiMonthly">₹4,077/mo</div>
-          <p class="emi-note">*Indicative only. Excludes RTO, insurance &amp; processing fee.</p>
-          <div class="emi-breakup">
-            <div class="emi-row"><span>Loan Amount</span><b id="emiLoanAmt">₹1,20,000</b></div>
-            <div class="emi-row"><span>Total Interest</span><b id="emiInterest">₹26,772</b></div>
-            <div class="emi-row"><span>Total Payable</span><b id="emiTotal">₹1,46,772</b></div>
-          </div>
-          <button class="btn btn-wa" style="width:100%;" id="emiApplyBtn">
-            Apply for This Loan on WhatsApp
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Booking & Service ===== -->
-  <section id="booking" class="booking-section">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Book Online</span>
-        <h2>Book a Bike or Schedule a Service</h2>
-        <p>Fill the form and your request goes straight to our WhatsApp.</p>
-      </div>
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="bookTab">🚀 Book a Bike</button>
-        <button class="tab-btn" data-tab="svcTab">🛠 Book a Service</button>
-      </div>
-      <div class="tab-pane active" id="bookTab">
-        <div class="form-card">
-          <div class="form-grid">
-            <div class="field"><label>Select Your Bike *</label><select id="bkBike"><option value="">Choose a model…</option></select></div>
-            <div class="field"><label>Preferred Colour</label><select id="bkColor"><option value="Not selected">Select colour</option></select></div>
-            <div class="field"><label>Your Name *</label><input type="text" id="bkName" placeholder="Full name" /></div>
-            <div class="field"><label>Mobile Number *</label><input type="tel" id="bkPhone" placeholder="10-digit mobile" /></div>
-            <div class="field"><label>City</label><input type="text" id="bkCity" value="Chandrapura" /></div>
-            <div class="field"><label>Mode</label><select id="bkMode"><option>Full Payment</option><option>Finance / Loan</option><option>Test Drive First</option></select></div>
-          </div>
-          <div class="form-foot">
-            <span class="hint">📲 Your booking details will open in WhatsApp to confirm.</span>
-            <button class="btn btn-wa" onclick="bookBikeNow()">Book on WhatsApp</button>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane" id="svcTab">
-        <div class="form-card">
-          <form id="serviceForm" onsubmit="return bookService(event)">
-            <div class="form-grid">
-              <div class="field"><label>Your Name *</label><input type="text" id="svName" required placeholder="Full name" /></div>
-              <div class="field"><label>Mobile Number *</label><input type="tel" id="svPhone" required placeholder="10-digit mobile" /></div>
-              <div class="field"><label>Your Bajaj Bike *</label><select id="svBike" required><option value="">Select your bike…</option></select></div>
-              <div class="field"><label>Service Type *</label><select id="svType" required><option value="General Service">General Service</option><option value="Periodic Service">Periodic Service</option><option value="Engine Oil / Filter">Engine Oil / Filter</option><option value="Brake / Clutch Check">Brake / Clutch Check</option><option value="Accidental Repair">Accidental Repair</option><option value="Warranty Claim">Warranty Claim</option></select></div>
-              <div class="field full"><label>Preferred Date</label><input type="date" id="svDate" /></div>
-            </div>
-            <div class="form-foot">
-              <span class="hint">🛠 We'll confirm your slot on WhatsApp.</span>
-              <button class="btn btn-red" type="submit">Book Service on WhatsApp</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Why Us ===== -->
-  <section id="why">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Why RK AUTOMOBILES</span>
-        <h2>The Complete Bajaj Experience</h2>
-        <p>From buying to servicing, we take care of the entire journey.</p>
-      </div>
-      <div class="feat-grid">
-        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21V12h6v9"/></svg></div><h4>Genuine Showroom</h4><p>Authorised Bajaj dealer with 100% genuine bikes and parts.</p></div>
-        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h4>Easy Finance</h4><p>Attractive EMI plans &amp; quick loan approval in minutes.</p></div>
-        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h4>Expert Service</h4><p>Factory-trained technicians with genuine Bajaj service.</p></div>
-        <div class="feat"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg></div><h4>Easy Exchange</h4><p>Trade-in your old bike for the best market value.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Branches ===== -->
-  <section id="branches" style="background:var(--soft);">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Find Us</span>
-        <h2>Our Branches</h2>
-        <p>Visit the RK AUTOMOBILES showroom nearest to you.</p>
-      </div>
-          <div class="branch-grid">
-        <div class="branch-card">
-          <div class="branch-head"><span class="branch-badge">Main Branch</span><h3>Chandrapura Showroom</h3></div>
-          <div class="branch-addr"><span class="pin">📍</span><p>Station Rd, Choubey Market,<br/>Chandrapura, Jharkhand - 828403</p></div>
-          <div class="branch-actions">
-            <a href="https://www.google.com/maps/search/?api=1&query=Station+Rd+Choubey+Market+Chandrapura+Jharkhand+828403" target="_blank" class="btn btn-outline">Get Directions</a>
-            <a href="https://wa.me/917004799172?text=Hello%20RK%20Automobiles%2C%20I%20want%20to%20enquire%20about%20Bajaj%20bikes%20(Main%20Branch)." target="_blank" class="btn btn-wa">WhatsApp Us</a>
-          </div>
-        </div>
-
-        <div class="branch-card">
-          <div class="branch-head"><span class="branch-badge">Branch 2</span><h3>Telo Showroom</h3></div>
-          <div class="branch-addr"><span class="pin">📍</span><p>Beltand Station Road, Telo, Mahato Market,<br/>Near Durga Mandir</p></div>
-          <div class="branch-actions">
-            <a href="https://www.google.com/maps/search/?api=1&query=Beltand+Station+Road+Telo+Mahato+Market+Chandrapura" target="_blank" class="btn btn-outline">Get Directions</a>
-            <a href="https://wa.me/917004799172?text=Hello%20RK%20Automobiles%2C%20I%20want%20to%20enquire%20about%20Bajaj%20bikes%20(Telo%20Branch)." target="_blank" class="btn btn-wa">WhatsApp Us</a>
-          </div>
-        </div>
-
-        <div class="branch-card">
-          <div class="branch-head"><span class="branch-badge">Branch 3</span><h3>Dugda Showroom</h3></div>
-          <div class="branch-addr"><span class="pin">📍</span><p>Chandwadih, Station Road, Dugda,<br/>District: Bokaro</p></div>
-          <div class="branch-actions">
-            <a href="https://www.google.com/maps/search/?api=1&query=Chandwadih+Station+Road+Dugda+Bokaro" target="_blank" class="btn btn-outline">Get Directions</a>
-            <a href="https://wa.me/917004799172?text=Hello%20RK%20Automobiles%2C%20I%20want%20to%20enquire%20about%20Bajaj%20bikes%20(Dugda%20Branch)." target="_blank" class="btn btn-wa">WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== About ===== -->
-  <section id="about" style="background:var(--soft);">
-    <div class="container about-grid">
-      <div class="about-img">
-        <img src="images/bikes/ns200/glossy-ebony-black.jpg" alt="RK Automobiles" onerror="this.src='https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&q=80'" />
-      </div>
-      <div class="about-content">
-        <span class="kicker" style="color:var(--red);">About Us</span>
-        <h2>Chandrapura's Trusted Bajaj Showroom</h2>
-        <p>RK Automobiles has been serving riders for over two decades, delivering the legendary Bajaj experience with honesty and care.</p>
-        <ul class="about-list">
-          <li><span class="tick">✓</span><span>Complete range of Bajaj bikes &amp; genuine accessories in stock.</span></li>
-          <li><span class="tick">✓</span><span>Hassle-free booking, finance and exchange assistance.</span></li>
-          <li><span class="tick">✓</span><span>Authorised Bajaj service centre with trained technicians.</span></li>
-          <li><span class="tick">✓</span><span>Instant WhatsApp support for bookings &amp; enquiries.</span></li>
-        </ul>
-        <a href="#booking" class="btn btn-red" style="margin-top:14px;">Book Your Bike</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Contact ===== -->
-  <section id="contact">
-    <div class="container">
-      <div class="sec-head">
-        <span class="kicker">Get In Touch</span>
-        <h2>Visit or Contact Us</h2>
-        <p>Drop by the showroom, call us, or send a quick WhatsApp enquiry.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="info-card">
-          <h3>RK Automobiles</h3>
-          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span><div><b>Phone / WhatsApp</b><span><a href="tel:+917004799172" style="color:#c9d1dc;">+91 70047 99172</a></span></div></div>
-          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span><div><b>Query Contact</b><span><a href="tel:+918451997498" style="color:#c9d1dc;">+91 84519 97498</a></span></div></div>
-          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg></span><div><b>Email</b><span><a href="mailto:rkautomobile2206@gmail.com" style="color:#c9d1dc;">rkautomobile2206@gmail.com</a></span></div></div>
-          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><b>Timings</b><span>Mon–Sat: 9:30 AM – 8:00 PM | Sun: 10 AM – 5 PM</span></div></div>
-        </div>
-        <div>
-          <div class="form-card" style="box-shadow:none;">
-            <h3 style="margin-bottom:18px;">Send an Enquiry</h3>
-            <form id="contactForm">
-              <div class="form-grid">
-                <div class="field"><label>Name *</label><input type="text" id="ctName" required placeholder="Your name" /></div>
-                <div class="field"><label>Phone *</label><input type="tel" id="ctPhone" required placeholder="10-digit mobile" /></div>
-                <div class="field full"><label>Message</label><textarea id="ctMsg" placeholder="Type your enquiry here…"></textarea></div>
-              </div>
-              <div class="form-foot" style="margin-top:18px;">
-                <span class="hint">📲 Sends to our WhatsApp.</span>
-                <button class="btn btn-wa" type="submit">Send Enquiry</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer>
-    <div class="container foot-grid">
-      <div class="foot-logo">
-        <img src="images/logo/logo.jpg" alt="RK Automobiles" class="foot-logo-img" onerror="this.style.display='none'" />
-        <b>RK AUTOMOBILES</b>
-        <p>Authorised Bajaj bike showroom &amp; service centre.</p>
-        <div class="social">
-          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="https://www.instagram.com/bajajchandrapura/?hl=en" target="_blank" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="https://wa.me/917004799172" target="_blank" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20z"/></svg></a>
-        </div>
-      </div>
-      <div><h5>Quick Links</h5><a href="#home">Home</a><a href="#offers">Offers</a><a href="#bikes">Bikes</a><a href="#catalogue">Catalogue</a><a href="#emi">EMI Calculator</a><a href="#booking">Book a Bike</a><a href="#branches">Branches</a></div>
-      <div><h5>Popular Models</h5><a href="#bikes">Pulsar NS400Z</a><a href="#bikes">Pulsar NS200</a><a href="#bikes">Pulsar N160</a><a href="#bikes">Dominar 400</a><a href="#bikes">Freedom 125 CNG</a></div>
-      <div><h5>Contact</h5><p style="font-size:14px;">Station Rd, Choubey Market, Chandrapura, Jharkhand - 828403</p><p style="font-size:14px;"><a href="tel:+917004799172">+91 70047 99172</a></p><p style="font-size:14px;">Mon–Sat: 9:30 AM – 8:00 PM</p></div>
-    </div>
-    <div class="foot-bottom">
-      <div class="container">© <span id="year"></span> RK Automobiles, Chandrapura. All rights reserved.</div>
-    </div>
-  </footer>
-
-  <!-- ===== Modal ===== -->
-  <div class="overlay" id="modalOverlay">
-    <div class="modal">
-      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
-      <div class="modal-top">
-        <div class="modal-stage">
-          <img id="modalMain" src="" alt="Bike view" />
-          <div class="modal-thumbs" id="modalThumbs"></div>
-        </div>
-        <div class="modal-info">
-          <h3 id="modalTitle"></h3>
-          <div class="price" id="modalPrice"></div>
-          <p id="modalDesc"></p>
-          <div class="modal-specs" id="modalSpecs"></div>
-          <div class="modal-foot">
-            <button class="btn btn-wa" id="modalBook" onclick="bookBike(this.dataset.id)">Book on WhatsApp</button>
-            <button class="btn btn-dark" onclick="closeModal()">Close</button>
-          </div>
-        </div>
-      </div>
+  <!-- SUPER ADMIN LOGIN -->
+  <div class="login-view" id="view-login-super" style="display:none;">
+    <div class="topbar"><button class="backbtn" onclick="goto('landing')">&#8592;</button><h2>Super Admin Login</h2></div>
+    <div class="login-card">
+      <div class="field"><label>Username</label><input id="su-user" placeholder="Username"></div>
+      <div class="field"><label>Password</label><input id="su-pass" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"></div>
+      <div class="err" id="su-err"></div>
+      <button class="btn primary" onclick="attemptLogin('su')">Log In</button>
+      <div style="text-align:center;margin-top:14px;"><a href="#" onclick="goto('forgot-password');return false;" style="color:var(--amber);font-size:12.5px;text-decoration:none;font-weight:600;">Forgot password?</a></div>
     </div>
   </div>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/917004799172?text=Hello%20RK%20Automobiles%2C%20I%20have%20a%20quick%20question."
-     target="_blank" id="waFloat" aria-label="Chat on WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20z"/>
-    </svg>
-  </a>
+  <!-- FORGOT PASSWORD (Super Admin only) -->
+  <div class="login-view" id="view-forgot-password" style="display:none;">
+    <div class="topbar"><button class="backbtn" onclick="goto('login-super')">&#8592;</button><h2>Reset Super Admin Password</h2></div>
+    <div class="login-card" id="fp-card"></div>
+  </div>
 
-  <button id="toTop" aria-label="Scroll to top">↑</button>
+  <!-- SECTION ADMIN LOGIN -->
+  <div class="login-view" id="view-login-section" style="display:none;">
+    <div class="topbar"><button class="backbtn" onclick="goto('landing')">&#8592;</button><h2>Section Admin Login</h2></div>
+    <div class="login-card">
+      <div class="field"><label>Your Section</label><select id="sc-section"></select></div>
+      <div class="field"><label>Username</label><input id="sc-user" placeholder="e.g. dev_admin"></div>
+      <div class="field"><label>Password</label><input id="sc-pass" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"></div>
+      <div class="err" id="sc-err"></div>
+      <button class="btn primary" onclick="attemptLogin('sc')">Log In</button>
+      <div class="hint">Don't have a login, or forgot your password? Ask your Super Admin &mdash; only they can create or reset section admin accounts.</div>
+    </div>
+  </div>
 
-  <script src="js/bikes-data.js"></script>
-  <script src="js/main.js"></script>
+  <!-- APP SHELL -->
+  <div class="app-shell" id="app-shell">
+    <div class="header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="logo.png" alt="BCCL" style="width:34px;height:34px;border-radius:8px;flex-shrink:0;">
+        <div class="who"><strong id="hdr-name">-</strong><span id="hdr-scope">-</span></div>
+      </div>
+      <div style="display:flex;gap:8px;" id="hdr-actions">
+        <button class="icon-btn" onclick="logout()" title="Log out">&#10162;</button>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <!-- DASHBOARD -->
+      <div class="view" id="view-dashboard">
+        <h3 class="section-title">Today's Overview</h3>
+        <div class="cards-row" id="dash-cards"></div>
+        <div id="dash-bysection"></div>
+        <h3 class="section-title">Not Yet Marked Today</h3>
+        <div id="dash-notmarked"></div>
+      </div>
+
+      <!-- EMPLOYEES -->
+      <div class="view" id="view-employees">
+        <div class="fab-row">
+          <input id="emp-search" placeholder="Search name or code..." style="flex:1;padding:11px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);" oninput="renderEmployees()">
+          <button class="btn primary sm" onclick="openEmpModal()">+ Add</button>
+        </div>
+        <div id="emp-list"></div>
+      </div>
+
+      <!-- ATTENDANCE -->
+      <div class="view" id="view-attendance">
+        <div class="fab-row">
+          <input id="att-date" type="date" style="flex:1;padding:11px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);" onchange="renderAttendance()">
+          <button class="btn ghost sm" onclick="markAllPresent()">All Present</button>
+        </div>
+        <div id="att-section-filter"></div>
+        <div id="att-list"></div>
+        <button class="btn primary" style="margin-top:14px;" onclick="saveAttendance()">Save Attendance</button>
+      </div>
+
+      <!-- REPORTS -->
+      <div class="view" id="view-reports">
+        <div class="fab-row">
+          <select id="rep-month" style="flex:1;padding:11px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);"></select>
+          <button class="btn primary sm" onclick="renderReports()">Generate</button>
+        </div>
+        <button class="btn ghost" style="margin-bottom:14px;" onclick="exportToExcel()">Export All Attendance to Excel</button>
+        <div id="rep-out"></div>
+      </div>
+
+      <!-- LEAVES -->
+      <div class="view" id="view-leaves">
+        <div class="fab-row">
+          <button class="btn primary sm" onclick="openLeaveModal()">+ Record Leave</button>
+        </div>
+        <div id="leave-list"></div>
+      </div>
+
+      <!-- ADMINS (super only) -->
+      <div class="view" id="view-admins">
+        <div class="fab-row">
+          <button class="btn primary sm" onclick="openAdminModal()">+ New Admin</button>
+        </div>
+        <div id="admin-list"></div>
+      </div>
+    </div>
+
+    <div class="bottomnav" id="bottomnav"></div>
+  </div>
+
+  <div class="modal-bg" id="modal-bg"><div class="modal" id="modal-body"></div></div>
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+/* ============ EMAILJS CONFIG - PASTE YOUR IDs HERE ============ */
+const EMAILJS_PUBLIC_KEY = "yiYmbSrkN7f7gRzwA";
+const EMAILJS_SERVICE_ID = "service_rjavh2p";
+const EMAILJS_TEMPLATE_ID = "template_qojtjig";
+const EMAILJS_NOT_CONFIGURED = EMAILJS_PUBLIC_KEY === "YOUR_EMAILJS_PUBLIC_KEY";
+if(!EMAILJS_NOT_CONFIGURED){
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
+/* ============ FIREBASE CONFIG - PASTE YOUR CONFIG HERE ============ */
+const firebaseConfig = {
+  apiKey: "AIzaSyBacTrxozLEAQcevOgTna-hPuNFJq9WHPE",
+  authDomain: "pittrack-attendence.firebaseapp.com",
+  projectId: "pittrack-attendence",
+  storageBucket: "pittrack-attendence.firebasestorage.app",
+  messagingSenderId: "610194922725",
+  appId: "1:610194922725:web:7ff93b98ef284ec27a480c"
+};
+const FIREBASE_NOT_CONFIGURED = firebaseConfig.apiKey === "YOUR_API_KEY_HERE";
+let fbApp = null, fbDb = null;
+if(!FIREBASE_NOT_CONFIGURED){
+  fbApp = firebase.initializeApp(firebaseConfig);
+  fbDb = firebase.firestore();
+}
+
+/* ============ DATA LAYER ============ */
+const SECTIONS_WITH_CATEGORIES = ["Development","Longwall"];
+const DEFAULT_SECTIONS = ["Development","Longwall","CCS","LHD4","LOCO"];
+const SECTION_CODES = {"Development":"DEV","Longwall":"LW","CCS":"CCS","LHD4":"LHD4","LOCO":"LOCO"};
+const STATUS_LABELS = {P:"Present",A:"Absent",H:"Half Day",L:"Leave",Hol:"Holiday"};
+
+function todayLocal(){
+  const d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+}
+
+let DB = { sections:[], categories:[], users:[], employees:[], leaves:[] };
+let currentUser = null;
+let currentTab = "dashboard";
+
+async function sload(key, fallback){
+  try{
+    const doc = await fbDb.collection("kv").doc(key).get();
+    return doc.exists ? JSON.parse(doc.data().value) : fallback;
+  } catch(e){ console.error("cloud read failed", key, e); return fallback; }
+}
+async function ssave(key, value){
+  try{ await fbDb.collection("kv").doc(key).set({value: JSON.stringify(value)}); return true; }
+  catch(e){ console.error("cloud save failed", key, e); return false; }
+}
+async function slistKeys(prefix){
+  try{
+    const snap = await fbDb.collection("kv")
+      .where(firebase.firestore.FieldPath.documentId(), ">=", prefix)
+      .where(firebase.firestore.FieldPath.documentId(), "<", prefix + "\uf8ff")
+      .get();
+    const keys = [];
+    snap.forEach(doc=>keys.push(doc.id));
+    return keys;
+  } catch(e){ console.error("cloud list failed", prefix, e); return []; }
+}
+
+async function refreshCoreData(){
+  DB.sections = await sload("sections", DB.sections);
+  DB.categories = await sload("categories", DB.categories);
+  DB.users = await sload("users", DB.users);
+  DB.employees = await sload("employees", DB.employees);
+  DB.leaves = await sload("leaves", DB.leaves);
+}
+
+async function sha256Hex(str){
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+function genSalt(){
+  const arr = crypto.getRandomValues(new Uint8Array(12));
+  return Array.from(arr).map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+async function hashPw(pw, salt){ return await sha256Hex(salt+pw); }
+
+async function loadAll(){
+  DB.sections = await sload("sections", null);
+  if(!DB.sections){
+    // seed
+    DB.sections = DEFAULT_SECTIONS.map((name,i)=>({id:"sec_"+i, name, hasCategories: SECTIONS_WITH_CATEGORIES.includes(name)}));
+    DB.categories = [];
+    DB.sections.forEach(s=>{
+      if(s.hasCategories){
+        DB.categories.push({id:s.id+"_XV", sectionId:s.id, name:"XV"});
+        DB.categories.push({id:s.id+"_XVI", sectionId:s.id, name:"XVI"});
+      }
+    });
+    const salt = genSalt();
+    const hash = await hashPw("admin123", salt);
+    DB.users = [{id:"u_admin", username:"admin", salt, hash, fullName:"Super Admin", role:"super_admin", sectionId:null, status:"Active", email:"himanshubaghel32@gmail.com"}];
+    DB.employees = [];
+    DB.leaves = [];
+    await ssave("sections", DB.sections);
+    await ssave("categories", DB.categories);
+    await ssave("users", DB.users);
+    await ssave("employees", DB.employees);
+    await ssave("leaves", DB.leaves);
+  } else {
+    DB.categories = await sload("categories", []);
+    DB.users = await sload("users", []);
+    DB.employees = await sload("employees", []);
+    DB.leaves = await sload("leaves", []);
+  }
+}
+
+function sectionById(id){ return DB.sections.find(s=>s.id===id); }
+function categoriesForSection(id){ return DB.categories.filter(c=>c.sectionId===id); }
+function categoryById(id){ return DB.categories.find(c=>c.id===id); }
+
+/* ============ NAV / VIEW SWITCHING ============ */
+function goto(view){
+  document.querySelectorAll('.landing, .login-view').forEach(el=>el.style.display='none');
+  if(view==='landing') document.getElementById('view-landing').style.display='flex';
+  else document.getElementById('view-'+view).style.display='flex';
+  if(view==='login-section') populateSectionLoginDropdown();
+  if(view==='forgot-password') renderForgotPasswordStep1();
+}
+
+async function populateSectionLoginDropdown(){
+  await refreshCoreData();
+  const sel = document.getElementById('sc-section');
+  sel.innerHTML = DB.sections.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.style.display='block';
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(()=>t.style.display='none', 2400);
+}
+
+/* ============ AUTH ============ */
+async function attemptLogin(prefix){
+  const uEl = document.getElementById(prefix+'-user');
+  const pEl = document.getElementById(prefix+'-pass');
+  const errEl = document.getElementById(prefix+'-err');
+  errEl.textContent = "";
+  const username = uEl.value.trim();
+  const password = pEl.value;
+  if(!username || !password){ errEl.textContent = "Enter both username and password."; return; }
+
+  await refreshCoreData(); // pull latest accounts/sections in case another device changed them
+  const user = DB.users.find(u=>u.username.toLowerCase()===username.toLowerCase());
+  if(!user || user.status!=='Active'){ errEl.textContent = "Invalid username or password."; return; }
+  const hash = await hashPw(password, user.salt);
+  if(hash !== user.hash){ errEl.textContent = "Invalid username or password."; return; }
+
+  if(prefix==='su' && user.role!=='super_admin'){ errEl.textContent = "This account is not a Super Admin. Use the Section Admin login."; return; }
+  if(prefix==='sc'){
+    if(user.role!=='section_admin'){ errEl.textContent = "This account is a Super Admin. Use the Super Admin login."; return; }
+    const chosenSectionId = document.getElementById('sc-section').value;
+    if(user.sectionId !== chosenSectionId){
+      const actualSection = sectionById(user.sectionId);
+      errEl.textContent = `This account belongs to ${actualSection?actualSection.name:'a different'} section. Select that section and try again.`;
+      return;
+    }
+  }
+
+  currentUser = user;
+  enterApp();
+}
+
+function logout(){
+  currentUser = null;
+  document.getElementById('app-shell').classList.remove('active');
+  document.getElementById('su-user').value=''; document.getElementById('su-pass').value='';
+  document.getElementById('sc-user').value=''; document.getElementById('sc-pass').value='';
+  goto('landing');
+}
+
+/* ============ FORGOT PASSWORD / OTP (Super Admin only, via EmailJS) ============ */
+
+function getSuperAdmin(){ return DB.users.find(u=>u.role==='super_admin'); }
+
+function renderForgotPasswordStep1(){
+  const sa = getSuperAdmin();
+  if(!sa.email){
+    document.getElementById('fp-card').innerHTML = `
+      <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">No recovery email is configured for this account, so an OTP can't be sent.</p>
+      <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">There is no self-service reset for this case by design &mdash; anyone could otherwise use it to get in. Whoever manages this app/device can restore access directly on that device.</p>`;
+    return;
+  }
+  document.getElementById('fp-card').innerHTML = `
+    <div class="field"><label>Registered Email</label><input id="fp-email" placeholder="Enter your registered email"></div>
+    <div class="err" id="fp-err"></div>
+    <button class="btn primary" onclick="sendOtp()">Send Code by Email</button>`;
+}
+
+/* Device-owner-only recovery: intentionally NOT linked from any button or menu.
+   Run from the browser console on this device only: emergencyReset("newpassword") */
+window.emergencyReset = async function(newPassword){
+  if(!newPassword || newPassword.length<4){ console.log("Password must be at least 4 characters."); return; }
+  const sa = getSuperAdmin();
+  const idx = DB.users.findIndex(u=>u.id===sa.id);
+  const salt = genSalt();
+  const hash = await hashPw(newPassword, salt);
+  DB.users[idx].salt = salt; DB.users[idx].hash = hash;
+  const ok = await ssave("users", DB.users);
+  console.log(ok ? "Super admin password reset. Log in with the new password." : "Save failed - check connection.");
+  return ok;
+};
+
+let pendingEmailOtp = null; // {code, expiresAt}
+
+async function sendOtp(){
+  const sa = getSuperAdmin();
+  const enteredEmail = document.getElementById('fp-email').value.trim();
+  const errEl = document.getElementById('fp-err');
+  if(enteredEmail.toLowerCase() !== (sa.email||'').toLowerCase()){ errEl.textContent = "That email doesn't match our records."; return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(enteredEmail)){ errEl.textContent = "Enter a valid email address."; return; }
+  if(EMAILJS_NOT_CONFIGURED){ errEl.textContent = "Email recovery isn't set up yet. Contact whoever manages this app."; return; }
+
+  errEl.textContent = "Sending...";
+  const code = String(Math.floor(100000 + Math.random()*900000));
+  try{
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      to_email: enteredEmail,
+      otp_code: code,
+    });
+  } catch(e){
+    console.error(e);
+    errEl.textContent = "Could not send the email. Try again in a minute.";
+    return;
+  }
+  pendingEmailOtp = { code, expiresAt: Date.now() + 5*60*1000 };
+
+  document.getElementById('fp-card').innerHTML = `
+    <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">A code was emailed to your registered address. It expires in 5 minutes.</p>
+    <div class="field"><label>Enter the 6-digit code</label><input id="fp-otp" placeholder="000000" maxlength="6"></div>
+    <div class="err" id="fp-err2"></div>
+    <button class="btn primary" onclick="verifyOtp()">Verify Code</button>`;
+}
+
+function verifyOtp(){
+  const entered = document.getElementById('fp-otp').value.trim();
+  const errEl = document.getElementById('fp-err2');
+  if(!pendingEmailOtp || Date.now() > pendingEmailOtp.expiresAt){ errEl.textContent = "Code expired. Go back and request a new one."; return; }
+  if(entered !== pendingEmailOtp.code){ errEl.textContent = "Incorrect code."; return; }
+
+  document.getElementById('fp-card').innerHTML = `
+    <div class="field"><label>New Password</label><input id="fp-new" type="password"></div>
+    <div class="field"><label>Confirm New Password</label><input id="fp-confirm" type="password"></div>
+    <div class="err" id="fp-err3"></div>
+    <button class="btn primary" onclick="finishOtpReset()">Set New Password</button>`;
+}
+
+async function finishOtpReset(){
+  const nw = document.getElementById('fp-new').value;
+  const confirm = document.getElementById('fp-confirm').value;
+  const errEl = document.getElementById('fp-err3');
+  if(nw.length<4){ errEl.textContent = "Password must be at least 4 characters."; return; }
+  if(nw !== confirm){ errEl.textContent = "Passwords do not match."; return; }
+
+  const sa = getSuperAdmin();
+  const idx = DB.users.findIndex(u=>u.id===sa.id);
+  const salt = genSalt();
+  const hash = await hashPw(nw, salt);
+  DB.users[idx].salt = salt; DB.users[idx].hash = hash;
+  const ok = await ssave("users", DB.users);
+  if(!ok){ errEl.textContent = "Could not save the new password. Check your connection and try again."; return; }
+
+  pendingEmailOtp = null;
+  showToast("Password reset. Please log in with your new password.");
+  goto('login-super');
+}
+
+/* ============ APP SHELL ============ */
+function enterApp(){
+  document.getElementById('app-shell').classList.add('active');
+  document.querySelectorAll('.landing, .login-view').forEach(el=>el.style.display='none');
+  const isSuper = currentUser.role==='super_admin';
+  document.getElementById('hdr-name').textContent = currentUser.fullName || currentUser.username;
+  document.getElementById('hdr-scope').textContent = isSuper ? "Super Admin - All Sections" : (sectionById(currentUser.sectionId)?.name+" Section Admin");
+  const hdrActions = document.getElementById('hdr-actions');
+  hdrActions.innerHTML = (isSuper ? `<button class="icon-btn" onclick="openPwModal()" title="Change password">&#128272;</button>` : '')
+    + `<button class="icon-btn" onclick="logout()" title="Log out">&#10162;</button>`;
+  buildBottomNav(isSuper);
+  populateMonthSelect();
+  setDefaultDate();
+  switchTab('dashboard');
+  if(isSuper && !currentUser.email) promptForRecoveryEmail();
+}
+
+function promptForRecoveryEmail(){
+  document.getElementById('modal-body').innerHTML = `
+    <h3>Set a Recovery Email</h3>
+    <p style="font-size:13px;color:var(--text-dim);line-height:1.5;">This is required so you can reset your password via an emailed code if you're ever locked out.</p>
+    <div class="field"><label>Email Address</label><input id="rp-email" placeholder="you@example.com"></div>
+    <div class="err" id="rp-err"></div>
+    <button class="btn primary" onclick="saveRecoveryEmail()">Save Email</button>`;
+  openModal();
+  document.getElementById('modal-bg').dataset.mandatory = "true";
+}
+
+async function saveRecoveryEmail(){
+  const email = document.getElementById('rp-email').value.trim();
+  const errEl = document.getElementById('rp-err');
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ errEl.textContent = "Enter a valid email address."; return; }
+  const idx = DB.users.findIndex(u=>u.id===currentUser.id);
+  const previous = DB.users[idx].email;
+  DB.users[idx].email = email;
+  const ok = await ssave("users", DB.users);
+  if(!ok){ DB.users[idx].email = previous; errEl.textContent = "Could not save. Check your connection and try again."; return; }
+  currentUser = DB.users[idx];
+  closeModal();
+  showToast("Recovery email saved.");
+}
+
+function buildBottomNav(isSuper){
+  const tabs = [
+    {id:'dashboard', ic:'&#9635;', label:'Home'},
+    {id:'employees', ic:'&#128101;', label:'Staff'},
+    {id:'attendance', ic:'&#10003;', label:'Mark'},
+    {id:'reports', ic:'&#128202;', label:'Reports'},
+    {id:'leaves', ic:'&#128197;', label:'Leaves'},
+  ];
+  if(isSuper) tabs.push({id:'admins', ic:'&#9881;', label:'Admins'});
+  const nav = document.getElementById('bottomnav');
+  nav.innerHTML = tabs.map(t=>`<button class="navbtn" id="nav-${t.id}" onclick="switchTab('${t.id}')"><span class="navic">${t.ic}</span>${t.label}</button>`).join('');
+}
+
+async function switchTab(tab){
+  currentTab = tab;
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+tab).classList.add('active');
+  document.querySelectorAll('.navbtn').forEach(b=>b.classList.remove('on'));
+  const navBtn = document.getElementById('nav-'+tab);
+  if(navBtn) navBtn.classList.add('on');
+  await refreshCoreData(); // pull latest data in case another device made changes
+  if(tab==='dashboard') renderDashboard();
+  if(tab==='employees') renderEmployees();
+  if(tab==='attendance') renderAttendance();
+  if(tab==='reports') renderReports();
+  if(tab==='leaves') renderLeaves();
+  if(tab==='admins') renderAdmins();
+}
+
+function mySectionFilter(){ return currentUser.role==='super_admin' ? null : currentUser.sectionId; }
+function plateHtml(sectionName){
+  const code = SECTION_CODES[sectionName] || sectionName;
+  return `<span class="plate ${code}">${code}</span>`;
+}
+
+/* ============ DASHBOARD ============ */
+async function attendanceForDate(dateStr){
+  return await sload("attendance:"+dateStr, {});
+}
+
+async function renderDashboard(){
+  const today = todayLocal();
+  const att = await attendanceForDate(today);
+  const secFilter = mySectionFilter();
+  const activeEmps = DB.employees.filter(e=>e.status==='Active' && (secFilter?e.sectionId===secFilter:true));
+
+  let present=0, absent=0, half=0, leave=0;
+  activeEmps.forEach(e=>{
+    const rec = att[e.id];
+    if(!rec) return;
+    if(rec.status==='P') present++;
+    else if(rec.status==='A') absent++;
+    else if(rec.status==='H') half++;
+    else if(rec.status==='L') leave++;
+  });
+
+  document.getElementById('dash-cards').innerHTML = [
+    ['Total', activeEmps.length, 'var(--text)'],
+    ['Present', present, 'var(--green)'],
+    ['Absent', absent, 'var(--red)'],
+    ['Half Day', half, 'var(--amber)'],
+    ['Leave', leave, 'var(--purple)'],
+  ].map(c=>`<div class="stat-card"><div class="n" style="color:${c[2]}">${c[1]}</div><div class="l">${c[0]}</div></div>`).join('');
+
+  const bySecEl = document.getElementById('dash-bysection');
+  if(currentUser.role==='super_admin'){
+    let rows = '';
+    for(const s of DB.sections){
+      const emps = DB.employees.filter(e=>e.status==='Active' && e.sectionId===s.id);
+      let p=0,a=0;
+      emps.forEach(e=>{ const r=att[e.id]; if(r?.status==='P')p++; if(r?.status==='A')a++; });
+      rows += `<tr><td>${plateHtml(s.name)} ${s.name}</td><td>${emps.length}</td><td style="color:var(--green)">${p}</td><td style="color:var(--red)">${a}</td></tr>`;
+    }
+    bySecEl.innerHTML = `<h3 class="section-title">By Section</h3><table class="table-mini"><tr><th>Section</th><th>Total</th><th>Present</th><th>Absent</th></tr>${rows}</table>`;
+  } else { bySecEl.innerHTML = ''; }
+
+  const notMarked = activeEmps.filter(e=>!att[e.id]);
+  document.getElementById('dash-notmarked').innerHTML = notMarked.length===0
+    ? `<div class="empty">Everyone's marked for today.</div>`
+    : notMarked.map(e=>`<div class="list-item"><div class="info"><div class="name">${e.name} <span class="code-tag">${e.code}</span></div><div class="meta">${currentUser.role==='super_admin'?plateHtml(sectionById(e.sectionId)?.name)+' ':''}${categoryById(e.categoryId)?.name||''}</div></div></div>`).join('');
+}
+
+/* ============ EMPLOYEES ============ */
+function renderEmployees(){
+  const secFilter = mySectionFilter();
+  const term = (document.getElementById('emp-search').value||'').toLowerCase();
+  let list = DB.employees.filter(e=> secFilter ? e.sectionId===secFilter : true);
+  if(term) list = list.filter(e=>e.name.toLowerCase().includes(term)||e.code.toLowerCase().includes(term));
+  list.sort((a,b)=>a.name.localeCompare(b.name));
+
+  document.getElementById('emp-list').innerHTML = list.length===0 ? `<div class="empty">No employees yet. Tap "+ Add" to create one.</div>` :
+    list.map(e=>{
+      const sec = sectionById(e.sectionId);
+      const cat = categoryById(e.categoryId);
+      return `<div class="list-item" onclick="openEmpModal('${e.id}')">
+        <div class="info">
+          <div class="name">${e.name} <span class="code-tag">${e.code}</span></div>
+          <div class="meta">${currentUser.role==='super_admin'?plateHtml(sec?.name)+' '+sec?.name+' &middot; ':''}${cat?cat.name+' &middot; ':''}${e.designation||''} ${e.status==='Inactive'?' &middot; <span style="color:var(--red)">Inactive</span>':''}</div>
+        </div>
+      </div>`;
+    }).join('');
+}
+
+function openEmpModal(empId){
+  const editing = !!empId;
+  const emp = editing ? DB.employees.find(e=>e.id===empId) : null;
+  const sections = currentUser.role==='super_admin' ? DB.sections : [sectionById(currentUser.sectionId)];
+  const sectionOptions = sections.map(s=>`<option value="${s.id}" ${emp&&emp.sectionId===s.id?'selected':''}>${s.name}</option>`).join('');
+
+  document.getElementById('modal-body').innerHTML = `
+    <h3>${editing?'Edit Employee':'Add Employee'}</h3>
+    <div class="field"><label>Employee Code *</label><input id="m-code" value="${emp?emp.code:''}"></div>
+    <div class="field"><label>Full Name *</label><input id="m-name" value="${emp?emp.name:''}"></div>
+    ${currentUser.role==='super_admin' ? `<div class="field"><label>Section *</label><select id="m-section" onchange="updateModalCategoryOptions()">${sectionOptions}</select></div>` : `<input type="hidden" id="m-section" value="${currentUser.sectionId}">`}
+    <div class="field"><label>Category</label><select id="m-category"></select></div>
+    <div class="field"><label>Designation</label><input id="m-desig" value="${emp?emp.designation||'':''}"></div>
+    <div class="field"><label>Phone</label><input id="m-phone" value="${emp?emp.phone||'':''}"></div>
+    <div class="field"><label>Status</label><select id="m-status"><option ${!emp||emp.status==='Active'?'selected':''}>Active</option><option ${emp&&emp.status==='Inactive'?'selected':''}>Inactive</option></select></div>
+    <div class="err" id="m-err"></div>
+    <div class="modal-actions">
+      <button class="btn ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn primary" onclick="saveEmployee(${editing?`'${empId}'`:'null'})">Save</button>
+    </div>
+    ${editing ? `<button class="btn danger" style="margin-top:10px;" onclick="deleteEmployee('${empId}')">Delete This Employee</button>` : ''}`;
+  updateModalCategoryOptions(emp?emp.categoryId:null);
+  openModal();
+}
+
+function updateModalCategoryOptions(preselect){
+  const secId = document.getElementById('m-section').value;
+  const sec = sectionById(secId);
+  const catSel = document.getElementById('m-category');
+  if(sec && sec.hasCategories){
+    const cats = categoriesForSection(sec.id);
+    catSel.disabled = false;
+    catSel.innerHTML = `<option value="">-- select --</option>` + cats.map(c=>`<option value="${c.id}" ${preselect===c.id?'selected':''}>${c.name}</option>`).join('');
+  } else {
+    catSel.disabled = true;
+    catSel.innerHTML = `<option value="">N/A</option>`;
+  }
+}
+
+async function saveEmployee(empId){
+  const code = document.getElementById('m-code').value.trim();
+  const name = document.getElementById('m-name').value.trim();
+  const sectionId = document.getElementById('m-section').value;
+  const categoryId = document.getElementById('m-category').value || null;
+  const errEl = document.getElementById('m-err');
+  if(!code || !name){ errEl.textContent = "Code and Name are required."; return; }
+  const sec = sectionById(sectionId);
+  if(sec.hasCategories && !categoryId){ errEl.textContent = "Select a category (XV/XVI) for this section."; return; }
+  const dupe = DB.employees.find(e=>e.code.toLowerCase()===code.toLowerCase() && e.id!==empId);
+  if(dupe){ errEl.textContent = "Employee code already exists."; return; }
+
+  const data = {
+    code, name, sectionId, categoryId,
+    designation: document.getElementById('m-desig').value.trim(),
+    phone: document.getElementById('m-phone').value.trim(),
+    status: document.getElementById('m-status').value,
+  };
+
+  if(empId){
+    const idx = DB.employees.findIndex(e=>e.id===empId);
+    DB.employees[idx] = {...DB.employees[idx], ...data};
+  } else {
+    DB.employees.push({id:'emp_'+Date.now(), ...data, dateJoined: todayLocal()});
+  }
+  await ssave("employees", DB.employees);
+  closeModal();
+  showToast(empId?"Employee updated.":"Employee added.");
+  renderEmployees();
+}
+
+async function deleteEmployee(empId){
+  const emp = DB.employees.find(e=>e.id===empId);
+  if(!emp) return;
+  if(!confirm(`Permanently delete "${emp.name}" (${emp.code})? Their past attendance and leave records will remain, but they'll no longer appear anywhere in the app. This cannot be undone.`)) return;
+  const previousEmployees = JSON.parse(JSON.stringify(DB.employees));
+  DB.employees = DB.employees.filter(e=>e.id!==empId);
+  const ok = await ssave("employees", DB.employees);
+  if(!ok){ DB.employees = previousEmployees; showToast("Could not delete. Check your connection and try again."); return; }
+  closeModal();
+  showToast("Employee deleted.");
+  renderEmployees();
+}
+
+/* ============ ATTENDANCE ============ */
+let attendanceDraft = {};
+
+function setDefaultDate(){ document.getElementById('att-date').value = todayLocal(); }
+
+async function renderAttendance(){
+  const dateStr = document.getElementById('att-date').value || todayLocal();
+  const secFilter = mySectionFilter();
+  const att = await attendanceForDate(dateStr);
+  attendanceDraft = {...att};
+
+  const filterEl = document.getElementById('att-section-filter');
+  if(currentUser.role==='super_admin'){
+    filterEl.innerHTML = `<select id="att-sec-sel" onchange="renderAttendanceList()" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text);margin-bottom:12px;">
+      <option value="">All Sections</option>${DB.sections.map(s=>`<option value="${s.id}">${s.name}</option>`).join('')}</select>`;
+  } else { filterEl.innerHTML=''; }
+  renderAttendanceList();
+}
+
+function renderAttendanceList(){
+  const secSel = document.getElementById('att-sec-sel');
+  const secFilter = currentUser.role==='super_admin' ? (secSel?secSel.value:'') : currentUser.sectionId;
+  let list = DB.employees.filter(e=>e.status==='Active' && (secFilter?e.sectionId===secFilter:true));
+  list.sort((a,b)=>a.name.localeCompare(b.name));
+
+  document.getElementById('att-list').innerHTML = list.length===0 ? `<div class="empty">No employees to mark.</div>` :
+    list.map(e=>{
+      const rec = attendanceDraft[e.id] || {};
+      const cat = categoryById(e.categoryId);
+      const chips = ['P','A','H','L','Hol'].map(code=>
+        `<button class="chip ${code} ${rec.status===code?'on':''}" onclick="setAttStatus('${e.id}','${code}')">${code}</button>`).join('');
+      return `<div class="list-item" style="flex-direction:column;align-items:stretch;">
+        <div class="info"><div class="name">${e.name} <span class="code-tag">${e.code}</span></div>
+        <div class="meta">${cat?cat.name:''}</div></div>
+        <div class="status-chips">${chips}</div>
+      </div>`;
+    }).join('');
+}
+
+function setAttStatus(empId, status){
+  const existing = attendanceDraft[empId] || {};
+  attendanceDraft[empId] = {...existing, status, markedBy: currentUser.username};
+  renderAttendanceList();
+}
+
+function markAllPresent(){
+  const secSel = document.getElementById('att-sec-sel');
+  const secFilter = currentUser.role==='super_admin' ? (secSel?secSel.value:'') : currentUser.sectionId;
+  DB.employees.filter(e=>e.status==='Active' && (secFilter?e.sectionId===secFilter:true))
+    .forEach(e=>{ attendanceDraft[e.id] = {...(attendanceDraft[e.id]||{}), status:'P', markedBy: currentUser.username}; });
+  renderAttendanceList();
+}
+
+async function saveAttendance(){
+  const dateStr = document.getElementById('att-date').value;
+  await ssave("attendance:"+dateStr, attendanceDraft);
+  showToast("Attendance saved.");
+  renderDashboard();
+}
+
+/* ============ EXCEL EXPORT ============ */
+async function exportToExcel(silent){
+  if(typeof XLSX === 'undefined'){
+    if(!silent) showToast("Excel library failed to load - check your internet connection.");
+    return;
+  }
+  let keys = [];
+  try{ keys = await slistKeys("attendance:"); }
+  catch(e){ keys = []; }
+
+  const secFilter = mySectionFilter();
+  const rows = [];
+  const dayEntries = await Promise.all(keys.map(async k=>({dateStr:k.replace("attendance:",""), rec: await sload(k,{})})));
+
+  dayEntries.sort((a,b)=>a.dateStr.localeCompare(b.dateStr));
+  dayEntries.forEach(({dateStr, rec})=>{
+    const d = new Date(dateStr+"T00:00:00");
+    const day = d.getDate();
+    const month = d.toLocaleString('default',{month:'long'});
+    const year = d.getFullYear();
+    Object.keys(rec).forEach(empId=>{
+      const emp = DB.employees.find(e=>e.id===empId);
+      if(!emp) return;
+      if(secFilter && emp.sectionId !== secFilter) return;
+      const sec = sectionById(emp.sectionId);
+      const cat = categoryById(emp.categoryId);
+      rows.push({
+        "Employee Code": emp.code,
+        "Name": emp.name,
+        "Section": sec ? sec.name : "",
+        "Category": cat ? cat.name : "",
+        "Date": dateStr,
+        "Day": day,
+        "Month": month,
+        "Year": year,
+        "Status": STATUS_LABELS[rec[empId].status] || rec[empId].status,
+        "Remarks": rec[empId].remarks || "",
+        "Marked By": rec[empId].markedBy || "",
+      });
+    });
+  });
+
+  if(rows.length===0){
+    if(!silent) showToast("No attendance data to export yet.");
+    return;
+  }
+
+  const ws = XLSX.utils.json_to_sheet(rows);
+  ws['!cols'] = [{wch:12},{wch:20},{wch:14},{wch:10},{wch:12},{wch:6},{wch:12},{wch:8},{wch:11},{wch:20},{wch:14}];
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Attendance");
+  const scope = secFilter ? (sectionById(secFilter)?.name || "Section") : "AllSections";
+  const stamp = new Date().toISOString().replace(/[:T]/g,"-").slice(0,19);
+  XLSX.writeFile(wb, `BCCL_AR_Attendance_${scope}_${stamp}.xlsx`);
+  if(!silent) showToast("Excel file downloaded.");
+}
+
+/* ============ REPORTS ============ */
+function populateMonthSelect(){
+  const sel = document.getElementById('rep-month');
+  const now = new Date();
+  let opts = '';
+  for(let i=0;i<6;i++){
+    const d = new Date(now.getFullYear(), now.getMonth()-i, 1);
+    const val = d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0"); // local date, not UTC
+    const label = d.toLocaleString('default',{month:'long', year:'numeric'});
+    opts += `<option value="${val}" ${i===0?'selected':''}>${label}</option>`;
+  }
+  sel.innerHTML = opts;
+}
+
+async function renderReports(){
+  const monthVal = document.getElementById('rep-month').value; // YYYY-MM
+  const secFilter = mySectionFilter();
+  let keys = [];
+  try{ keys = await slistKeys("attendance:"+monthVal); }
+  catch(e){ keys = []; }
+
+  const dayRecords = await Promise.all(keys.map(k=>sload(k, {})));
+  const totals = {}; // empId -> {P,A,H,L}
+  dayRecords.forEach(rec=>{
+    Object.keys(rec).forEach(empId=>{
+      const status = rec[empId].status;
+      totals[empId] = totals[empId] || {P:0,A:0,H:0,L:0};
+      if(totals[empId][status]!==undefined) totals[empId][status]++;
+    });
+  });
+
+  let list = DB.employees.filter(e=> secFilter ? e.sectionId===secFilter : true);
+  list.sort((a,b)=>a.name.localeCompare(b.name));
+
+  const rows = list.map(e=>{
+    const t = totals[e.id] || {P:0,A:0,H:0,L:0};
+    const sec = sectionById(e.sectionId);
+    return `<tr><td>${e.code}</td><td>${e.name}</td><td>${currentUser.role==='super_admin'?sec?.name:categoryById(e.categoryId)?.name||''}</td>
+      <td style="color:var(--green)">${t.P}</td><td style="color:var(--red)">${t.A}</td><td style="color:var(--amber)">${t.H}</td><td style="color:var(--purple)">${t.L}</td></tr>`;
+  }).join('');
+
+  document.getElementById('rep-out').innerHTML = list.length===0 ? `<div class="empty">No employees found.</div>` :
+    `<table class="table-mini"><tr><th>Code</th><th>Name</th><th>${currentUser.role==='super_admin'?'Section':'Category'}</th><th>P</th><th>A</th><th>H</th><th>L</th></tr>${rows}</table>`;
+}
+
+/* ============ LEAVES ============ */
+function renderLeaves(){
+  const secFilter = mySectionFilter();
+  let list = DB.leaves.filter(l=>{
+    const emp = DB.employees.find(e=>e.id===l.employeeId);
+    return emp && (secFilter ? emp.sectionId===secFilter : true);
+  }).sort((a,b)=> b.from.localeCompare(a.from));
+
+  document.getElementById('leave-list').innerHTML = list.length===0 ? `<div class="empty">No leave records yet.</div>` :
+    list.map(l=>{
+      const emp = DB.employees.find(e=>e.id===l.employeeId);
+      return `<div class="list-item"><div class="info">
+        <div class="name">${emp?emp.name:'Unknown'} <span class="code-tag">${l.type}</span></div>
+        <div class="meta">${l.from} &rarr; ${l.to} ${l.reason?(' &middot; '+l.reason):''}</div>
+      </div></div>`;
+    }).join('');
+}
+
+function openLeaveModal(){
+  const secFilter = mySectionFilter();
+  const emps = DB.employees.filter(e=>secFilter?e.sectionId===secFilter:true).sort((a,b)=>a.name.localeCompare(b.name));
+  document.getElementById('modal-body').innerHTML = `
+    <h3>Record Leave</h3>
+    <div class="field"><label>Employee *</label><select id="lv-emp">${emps.map(e=>`<option value="${e.id}">${e.name} (${e.code})</option>`).join('')}</select></div>
+    <div class="field"><label>From *</label><input type="date" id="lv-from" value="${todayLocal()}"></div>
+    <div class="field"><label>To *</label><input type="date" id="lv-to" value="${todayLocal()}"></div>
+    <div class="field"><label>Type</label><select id="lv-type"><option>Sick</option><option>Casual</option><option>Paid</option><option>Unpaid</option></select></div>
+    <div class="field"><label>Reason</label><input id="lv-reason" placeholder="Optional"></div>
+    <div class="modal-actions"><button class="btn ghost" onclick="closeModal()">Cancel</button><button class="btn primary" onclick="saveLeave()">Save Leave</button></div>`;
+  openModal();
+}
+
+async function saveLeave(){
+  const employeeId = document.getElementById('lv-emp').value;
+  const from = document.getElementById('lv-from').value;
+  const to = document.getElementById('lv-to').value;
+  const type = document.getElementById('lv-type').value;
+  const reason = document.getElementById('lv-reason').value.trim();
+  DB.leaves.push({id:'lv_'+Date.now(), employeeId, from, to, type, reason, status:'Approved'});
+  await ssave("leaves", DB.leaves);
+  closeModal();
+  showToast("Leave recorded.");
+  renderLeaves();
+}
+
+/* ============ ADMINS (super admin only) ============ */
+function renderAdmins(){
+  const sa = getSuperAdmin();
+  const rows = DB.users.slice().filter(u=>u.role!=='super_admin').sort((a,b)=>a.username.localeCompare(b.username)).map(u=>{
+    const sec = u.sectionId ? sectionById(u.sectionId) : null;
+    return `<div class="list-item" onclick="openAdminModal('${u.id}')">
+      <div class="info">
+        <div class="name">${u.username}</div>
+        <div class="meta">${u.fullName||''} ${sec?(' &middot; '+plateHtml(sec.name)+' '+sec.name):''} &middot; ${u.status==='Active'?'<span style="color:var(--green)">Active</span>':'<span style="color:var(--red)">Inactive</span>'}</div>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('admin-list').innerHTML =
+    `<div class="list-item" onclick="openSuperAdminSettings()" style="border-color:var(--amber-dim);">
+      <div class="info"><div class="name">${sa.username} <span style="color:var(--amber)">&middot; Super Admin (you)</span></div>
+      <div class="meta">Tap to change username, recovery phone, or password</div></div>
+    </div>` +
+    (rows || `<div class="empty">No section admins yet. Tap "+ New Admin" to create one.</div>`);
+}
+
+function openAdminModal(userId){
+  const editing = !!userId;
+  const user = editing ? DB.users.find(u=>u.id===userId) : null;
+  document.getElementById('modal-body').innerHTML = `
+    <h3>${editing?'Edit Section Admin':'New Section Admin'}</h3>
+    <div class="field"><label>Username *</label><input id="a-user" value="${user?user.username:''}"></div>
+    <div class="field"><label>Full Name</label><input id="a-name" value="${user?user.fullName||'':''}"></div>
+    <div class="field"><label>Section *</label><select id="a-section">${DB.sections.map(s=>`<option value="${s.id}" ${user&&user.sectionId===s.id?'selected':''}>${s.name}</option>`).join('')}</select></div>
+    <div class="field"><label>Status</label><select id="a-status"><option ${!user||user.status==='Active'?'selected':''}>Active</option><option ${user&&user.status==='Inactive'?'selected':''}>Inactive</option></select></div>
+    <div class="field"><label>Password ${editing?'(leave blank to keep unchanged)':'*'}</label><input id="a-pass" type="password" placeholder="${editing?'unchanged':'set a password'}"></div>
+    <div class="err" id="a-err"></div>
+    <div class="modal-actions"><button class="btn ghost" onclick="closeModal()">Cancel</button><button class="btn primary" onclick="saveAdmin(${editing?`'${userId}'`:'null'})">Save</button></div>
+    ${editing ? `<button class="btn danger" style="margin-top:10px;" onclick="deleteAdmin('${userId}')">Delete This Admin Account</button>` : ''}`;
+  openModal();
+}
+
+async function saveAdmin(userId){
+  const username = document.getElementById('a-user').value.trim();
+  const fullName = document.getElementById('a-name').value.trim();
+  const sectionId = document.getElementById('a-section').value;
+  const status = document.getElementById('a-status').value;
+  const password = document.getElementById('a-pass').value;
+  const errEl = document.getElementById('a-err');
+
+  if(!username){ errEl.textContent = "Username is required."; return; }
+  const dupe = DB.users.find(u=>u.username.toLowerCase()===username.toLowerCase() && u.id!==userId);
+  if(dupe){ errEl.textContent = "Username already exists."; return; }
+  if(!userId && !password){ errEl.textContent = "Password is required for a new admin."; return; }
+  if(password && password.length<4){ errEl.textContent = "Password must be at least 4 characters."; return; }
+
+  const previousUsers = JSON.parse(JSON.stringify(DB.users));
+  if(userId){
+    const idx = DB.users.findIndex(u=>u.id===userId);
+    DB.users[idx] = {...DB.users[idx], username, fullName, sectionId, status};
+    if(password){
+      const salt = genSalt();
+      DB.users[idx].salt = salt;
+      DB.users[idx].hash = await hashPw(password, salt);
+    }
+  } else {
+    const salt = genSalt();
+    const hash = await hashPw(password, salt);
+    DB.users.push({id:'u_'+Date.now(), username, fullName, salt, hash, role:'section_admin', sectionId, status});
+  }
+  const ok = await ssave("users", DB.users);
+  if(!ok){ DB.users = previousUsers; errEl.textContent = "Could not save. Check your connection and try again."; return; }
+  closeModal();
+  showToast(userId?"Admin account updated.":"New admin created.");
+  renderAdmins();
+}
+
+async function deleteAdmin(userId){
+  const user = DB.users.find(u=>u.id===userId);
+  if(!user) return;
+  if(!confirm(`Permanently delete the "${user.username}" admin account? This cannot be undone.`)) return;
+  const previousUsers = JSON.parse(JSON.stringify(DB.users));
+  DB.users = DB.users.filter(u=>u.id!==userId);
+  const ok = await ssave("users", DB.users);
+  if(!ok){ DB.users = previousUsers; showToast("Could not delete. Check your connection and try again."); return; }
+  closeModal();
+  showToast("Admin account deleted.");
+  renderAdmins();
+}
+
+/* ============ SUPER ADMIN ACCOUNT SETTINGS ============ */
+function openSuperAdminSettings(){
+  const sa = getSuperAdmin();
+  document.getElementById('modal-body').innerHTML = `
+    <h3>Super Admin Account Settings</h3>
+    <div class="field"><label>Username</label><input id="sa-user" value="${sa.username}"></div>
+    <div class="field"><label>Full Name</label><input id="sa-name" value="${sa.fullName||''}"></div>
+    <div class="field"><label>Recovery Email</label><input id="sa-email" value="${sa.email||''}" placeholder="you@example.com"></div>
+    <div class="err" id="sa-err"></div>
+    <div class="modal-actions"><button class="btn ghost" onclick="closeModal()">Cancel</button><button class="btn primary" onclick="saveSuperAdminSettings()">Save</button></div>
+    <div style="border-top:1px solid var(--border);margin-top:18px;padding-top:16px;">
+      <button class="btn ghost" style="width:100%;" onclick="openPwModal()">Change My Password</button>
+    </div>`;
+  openModal();
+}
+
+async function saveSuperAdminSettings(){
+  const username = document.getElementById('sa-user').value.trim();
+  const fullName = document.getElementById('sa-name').value.trim();
+  const email = document.getElementById('sa-email').value.trim();
+  const errEl = document.getElementById('sa-err');
+  if(!username){ errEl.textContent = "Username is required."; return; }
+  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ errEl.textContent = "Enter a valid email address."; return; }
+  const sa = getSuperAdmin();
+  const otherDupe = DB.users.find(u=>u.id!==sa.id && u.username.toLowerCase()===username.toLowerCase());
+  if(otherDupe){ errEl.textContent = "That username is already in use."; return; }
+
+  const previousUsers = JSON.parse(JSON.stringify(DB.users));
+  const idx = DB.users.findIndex(u=>u.id===sa.id);
+  DB.users[idx].username = username;
+  DB.users[idx].fullName = fullName;
+  DB.users[idx].email = email || null;
+  const ok = await ssave("users", DB.users);
+  if(!ok){ DB.users = previousUsers; errEl.textContent = "Could not save. Check your connection and try again."; return; }
+  currentUser = DB.users[idx];
+  document.getElementById('hdr-name').textContent = currentUser.fullName || currentUser.username;
+  closeModal();
+  showToast("Account settings updated.");
+  renderAdmins();
+}
+
+/* ============ CHANGE MY PASSWORD ============ */
+function openPwModal(){
+  document.getElementById('modal-body').innerHTML = `
+    <h3>Change My Password</h3>
+    <div class="field"><label>Current Password</label><input id="p-cur" type="password"></div>
+    <div class="field"><label>New Password</label><input id="p-new" type="password"></div>
+    <div class="field"><label>Confirm New Password</label><input id="p-confirm" type="password"></div>
+    <div class="err" id="p-err"></div>
+    <div class="modal-actions"><button class="btn ghost" onclick="closeModal()">Cancel</button><button class="btn primary" onclick="submitPwChange()">Save New Password</button></div>`;
+  openModal();
+}
+
+async function submitPwChange(){
+  const cur = document.getElementById('p-cur').value;
+  const nw = document.getElementById('p-new').value;
+  const confirm = document.getElementById('p-confirm').value;
+  const errEl = document.getElementById('p-err');
+  const curHash = await hashPw(cur, currentUser.salt);
+  if(curHash !== currentUser.hash){ errEl.textContent = "Current password is incorrect."; return; }
+  if(nw.length<4){ errEl.textContent = "New password must be at least 4 characters."; return; }
+  if(nw !== confirm){ errEl.textContent = "New passwords do not match."; return; }
+
+  const salt = genSalt();
+  const hash = await hashPw(nw, salt);
+  const idx = DB.users.findIndex(u=>u.id===currentUser.id);
+  const previous = {salt: DB.users[idx].salt, hash: DB.users[idx].hash};
+  DB.users[idx].salt = salt; DB.users[idx].hash = hash;
+  const ok = await ssave("users", DB.users);
+  if(!ok){
+    DB.users[idx].salt = previous.salt; DB.users[idx].hash = previous.hash;
+    errEl.textContent = "Could not save the new password. Check your connection and try again.";
+    return;
+  }
+  currentUser = DB.users[idx];
+  closeModal();
+  showToast("Password updated.");
+}
+
+/* ============ MODAL HELPERS ============ */
+function openModal(){ document.getElementById('modal-bg').dataset.mandatory = "false"; document.getElementById('modal-bg').classList.add('active'); }
+function closeModal(){ document.getElementById('modal-bg').classList.remove('active'); }
+document.getElementById('modal-bg').addEventListener('click', (e)=>{ if(e.target.id==='modal-bg' && document.getElementById('modal-bg').dataset.mandatory!=='true') closeModal(); });
+
+/* ============ INIT ============ */
+(async function init(){
+  if(FIREBASE_NOT_CONFIGURED){
+    document.getElementById('root').innerHTML = `
+      <div style="padding:40px 24px;text-align:center;">
+        <h2 style="color:var(--red);">Firebase not configured</h2>
+        <p style="color:var(--text-dim);font-size:13px;line-height:1.6;">
+          This app needs a Firebase project connected before it will work. Open this file,
+          find the <code style="color:var(--amber);">firebaseConfig</code> block near the top of the
+          &lt;script&gt; section, and paste in your project's real config values.
+        </p>
+      </div>`;
+    return;
+  }
+  try{
+    await firebase.auth().signInAnonymously();
+  } catch(e){
+    document.getElementById('root').innerHTML = `
+      <div style="padding:40px 24px;text-align:center;">
+        <h2 style="color:var(--red);">Could not connect</h2>
+        <p style="color:var(--text-dim);font-size:13px;line-height:1.6;">
+          Couldn't sign in to the database. Check that Anonymous Authentication is enabled in your
+          Firebase project, and that you have an internet connection.
+        </p>
+      </div>`;
+    console.error(e);
+    return;
+  }
+  await loadAll();
+})();
+
+if("serviceWorker" in navigator){
+  window.addEventListener("load", ()=>{
+    navigator.serviceWorker.register("service-worker.js").catch(()=>{});
+  });
+}
+</script>
 </body>
 </html>
